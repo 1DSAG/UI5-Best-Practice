@@ -25,6 +25,16 @@
     "@commitlint/config-conventional": "^11.0.0",
     "eslint": "^7.17.0",
     "eslint-plugin-markdown": "^2.0.0-rc.1",
+    "husky": "^4.3.7",
     "lint-staged": "^10.5.3"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.md": "eslint --cache --fix"
   }
 }
