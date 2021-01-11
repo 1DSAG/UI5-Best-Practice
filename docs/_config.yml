@@ -22,7 +22,7 @@ title: DSAG's UI5 Best Practice guide
 email: info@dsag.de
 description: >- # this means to ignore newlines until "baseurl:"
   DSAG's UI5 best practice guide, a living document
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/UI5-Best-Practice" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: _dsag
 github_username:  DSAGadmin
