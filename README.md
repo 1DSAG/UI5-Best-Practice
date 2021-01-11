@@ -7,8 +7,9 @@ Because **the DSAG UI5 best practice guide is a living document** 👨‍💻 - 
 The document is written in (github flavored) `markdown` and served via `jekyll` in `github pages` (<https://1dsag.github.io/UI5-Best-Practice/>). So the recommended contribution approach is to
 
 - fork the repo + create new branch locally
-- run the guide locally (`bundle exec jekyll serve`).
-  write, edit, code (most likely in `/docs/**/*`). repeat.
+- run the guide locally (`bundle exec jekyll serve`).  
+  write, edit, code (most likely in `/docs/**/*`).  
+  repeat.
 - push local branch to your fork, create a PR, assign a reviewer
 - 🙌
 
@@ -45,8 +46,8 @@ You'll find more detailed instructions on each of the above below.
 
 ## linting of markdown content
 
-Any markdown content (in `/docs/**/*`) is linted via [`markdownlint`](https://github.com/DavidAnson/markdownlint) both for quality assurance and convenience.
-For quality assurance, to have the markdown-files max standard compliant, so subsequent processing and exporting is possible without running into formatting issues.
+Any markdown content (in `/docs/**/*`) is linted via [`markdownlint`](https://github.com/DavidAnson/markdownlint) both for quality assurance and convenience.  
+For quality assurance, to have the markdown-files max standard compliant, so subsequent processing and exporting is possible without running into formatting issues.  
 For convenience, because small markdown formatting mistakes are automatically fixed via the `markdownlint` upon commit - the `markdownlint` [`cli`](https://github.com/igorshubovych/markdownlint-cli) injects those fixes prior to the git commit, so don’t be surprised 😉
 
 ## git commit messages
