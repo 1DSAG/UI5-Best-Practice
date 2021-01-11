@@ -18,19 +18,19 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Your awesome title
-email: your-email@example.com
+title: DSAG's UI5 Best Practice guide
+email: info@dsag.de
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  DSAG's UI5 best practice guide, a living document
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+twitter_username: _dsag
+github_username:  DSAGadmin
+markdown: GFM
 
 # Build settings
-theme: minima
+remote_theme: pmarsceill/just-the-docs # for github pages
+theme: "just-the-docs" # for local install
 plugins:
   - jekyll-feed
 
