@@ -1,8 +1,21 @@
-# DSAG UI5 best practice guide
+# DSAG's UI5 best practice guide
 
 this is not the guide itself (it's over at <https://1dsag.github.io/UI5-Best-Practice/>), but the corresponding repository with instructions on how to contribute to the guide.
 
 Because **the DSAG UI5 best practice guide is a living document** 👨‍💻 - thriving on and with its' community 🥳
+
+The document is written in (github flavored) `markdown` and served via `jekyll` in `github pages` (<https://1dsag.github.io/UI5-Best-Practice/>). So the recommended contribution approach is to
+
+- fork the repo + create new branch locally
+- run the guide locally (`bundle exec jekyll serve`).
+  write, edit, code (most likely in `/docs/**/*`). repeat.
+- push local branch to your fork, create a PR, assign a reviewer
+- 🙌
+
+You'll find more detailed instructions on each of the above below.
+
+<!--ts-->
+<!--te-->
 
 ## setup local github pages site
 
@@ -32,11 +45,94 @@ Because **the DSAG UI5 best practice guide is a living document** 👨‍💻 - 
 
 ## linting of markdown content
 
-any markdown content (in /docs) is linted via [`markdownlint`](https://github.com/DavidAnson/markdownlint) both for quality assurance and convenience.
-For quality assurance,
-For convenience, because small mistakes are automatically fixed via the `markdownlint` cli.
+Any markdown content (in `/docs/**/*`) is linted via [`markdownlint`](https://github.com/DavidAnson/markdownlint) both for quality assurance and convenience.
+For quality assurance, to have the markdown-files max standard compliant, so subsequent processing and exporting is possible without running into formatting issues.
+For convenience, because small markdown formatting mistakes are automatically fixed via the `markdownlint` upon commit - the `markdownlint` [`cli`](https://github.com/igorshubovych/markdownlint-cli) injects those fixes prior to the git commit, so don’t be surprised 😉
 
 ## git commit messages
 
 commit messages are linted in order to allow for automatic later processing into `CHANGELOG` et al documents.  
-The linting occurs against the standards defined in the ["conventional commit" guidelines](https://github.com/conventional-changelog/commitlint/tree/master/%40commitlint/config-conventional), based on the Angular project ones.
+The linting occurs against the standards defined in the ["conventional commit" guidelines](https://github.com/conventional-changelog/commitlint/tree/master/%40commitlint/config-conventional), based on [the Angular project ones](https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines).
+
+The structure of a "conventional commit" message looks like:
+
+```text
+<type>[optional scope]: <description>
+
+[optional body]
+
+[optional footer(s)]
+```
+
+`<type>` can be any of
+
+- build
+- ci
+- chore
+- docs
+- feat
+- fix
+- perf
+- refactor
+- revert
+- style
+- test
+
+So a minimal commit message could look like...
+
+`feat: added basic testing chapter`
+
+…while a maxed out one might look like:
+
+```text
+fix: correct minor typos in code
+
+see the issue for details on typos fixed.
+additionally, replaced the dreaded ortho-""
+with straight/standard ones.
+
+Reviewed-by: Z
+Closes #133
+```
+
+Please refer to the [conventional commits website](https://www.conventionalcommits.org) for more details on all the possibilities of formatting a git commit message.
+
+## example PR-based workflow
+
+0. fork the repo
+   ![fork a github project](img/00-fork.png)
+
+1. clone your fork into your local development environment
+   ![clone the forked project](img/05-clone-fork.png)
+
+2. create a new local git branch
+   ![create new local git branch](img/10-new-branch.png)
+
+3. write, edit, code (most likely `markdown` content in `/docs/**/*`.
+
+   👨‍💻
+   repeat.
+
+   `git commit` early, `git commit` often
+   &rarr; watch out for the commit linting (see [git commit messages](#git-commit-messages))
+   &rarr; enjoy the helping of auto-markdown-linting (see [linting of markdown content](#linting-of-markdown-content))
+
+4. if applicable, [clean up your git commit history](https://about.gitlab.com/blog/2018/06/07/keeping-git-commit-history-clean/#situation-3-i-need-to-add-remove-or-combine-commits)
+
+5. push the local branch to your fork
+
+6. submit a pull request (PR)
+   ![create a pull request on github](img/30-create-PR.png)
+
+7. write the PR message similar to the [git commit messages](#git-commit-messages), so `squash`-merging gets easy for the maintainers
+   ![nice pull request message](img/31-PR-message.png)
+   if applicable, referenc open issues in your commit message (<https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword>)
+
+8. add a reviewer to the PR
+   ![add a reviewer to the pull request](img/35-PR-reviewer.png)
+
+9. Changes necessary after the PR was created?
+   Simply commit to the branch of your fork &rarr; the PR gets updated automatically
+
+10. PR review process successfully completed?
+    Then the PR will be merged by any of the maintainers and it’s time for 🎉
