@@ -1,6 +1,6 @@
 {
   "name": "ui5-best-practice",
-  "version": "0.0.1-irrelevant",
+  "version": "0.0.1",
   "description": "part of the environment setup for the DSAG UI5 best practice guide",
   "main": "--none",
   "scripts": {
