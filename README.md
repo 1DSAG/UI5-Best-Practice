@@ -16,6 +16,14 @@ The document is written in (github flavored) `markdown` and served via `jekyll` 
 You'll find more detailed instructions on each of the above below.
 
 <!--ts-->
+   * [DSAG's UI5 best practice guide](#dsags-ui5-best-practice-guide)
+      * [setup local github pages site](#setup-local-github-pages-site)
+      * [linting of markdown content](#linting-of-markdown-content)
+      * [git commit messages](#git-commit-messages)
+      * [example PR-based workflow](#example-pr-based-workflow)
+
+<!-- Added by: runner, at: Mon Jan 11 15:27:21 UTC 2021 -->
+
 <!--te-->
 
 ## setup local github pages site
