@@ -30,7 +30,7 @@ markdown: GFM
 
 # Build settings
 remote_theme: pmarsceill/just-the-docs # for github pages
-theme: "just-the-docs" # for local install
+# theme: "just-the-docs" # for local install
 plugins:
   - jekyll-feed
 
