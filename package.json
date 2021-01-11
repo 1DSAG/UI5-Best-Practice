@@ -1,6 +1,6 @@
 {
   "name": "ui5-best-practice",
-  "version": "0.0.1-irrelevant",
+  "version": "0.0.1",
   "description": "part of the environment setup for the DSAG UI5 best practice guide",
   "main": "--none",
   "scripts": {
@@ -8,18 +8,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vobu/UI5-Best-Practice.git"
+    "url": "git+https://github.com/1DSAG/UI5-Best-Practice.git"
   },
   "keywords": [
     "UI5",
-    "DSAG"
+    "DSAG",
+    "SAPUI5",
+    "openUI5"
   ],
   "author": "DSAG UI5 community",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/vobu/UI5-Best-Practice/issues"
+    "url": "https://github.com/1DSAG/UI5-Best-Practice/issues"
   },
-  "homepage": "https://github.com/vobu/UI5-Best-Practice#readme",
+  "homepage": "https://github.com/1DSAG/UI5-Best-Practice#readme",
   "dependencies": {
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
