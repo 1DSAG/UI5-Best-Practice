@@ -99,40 +99,39 @@ Please refer to the [conventional commits website](https://www.conventionalcommi
 
 ## example PR-based workflow
 
-0. fork the repo
+0. fork the repo  
    ![fork a github project](img/00-fork.png)
 
-1. clone your fork into your local development environment
+1. clone your fork into your local development environment  
    ![clone the forked project](img/05-clone-fork.png)
 
-2. create a new local git branch
+2. create a new local git branch  
    ![create new local git branch](img/10-new-branch.png)
 
-3. write, edit, code (most likely `markdown` content in `/docs/**/*`.
-
-   👨‍💻
+3. write, edit, code (most likely `markdown` content in `/docs/**/*`.  
+   👨‍💻  
    repeat.
 
-   `git commit` early, `git commit` often
-   &rarr; watch out for the commit linting (see [git commit messages](#git-commit-messages))
-   &rarr; enjoy the helping of auto-markdown-linting (see [linting of markdown content](#linting-of-markdown-content))
+   `git commit` early, `git commit` often  
+   &rarr; watch out for the commit linting (see [git commit messages](#git-commit-messages))  
+   &rarr; enjoy the convenience of auto-markdown-linting (see [linting of markdown content](#linting-of-markdown-content))
 
 4. if applicable, [clean up your git commit history](https://about.gitlab.com/blog/2018/06/07/keeping-git-commit-history-clean/#situation-3-i-need-to-add-remove-or-combine-commits)
 
 5. push the local branch to your fork
 
-6. submit a pull request (PR)
+6. submit a pull request (PR)  
    ![create a pull request on github](img/30-create-PR.png)
 
-7. write the PR message similar to the [git commit messages](#git-commit-messages), so `squash`-merging gets easy for the maintainers
+7. write the PR message similar to the [git commit messages](#git-commit-messages), so `squash`-merging gets easy for the maintainers  
    ![nice pull request message](img/31-PR-message.png)
    if applicable, referenc open issues in your commit message (<https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword>)
 
-8. add a reviewer to the PR
+8. add a reviewer to the PR  
    ![add a reviewer to the pull request](img/35-PR-reviewer.png)
 
-9. Changes necessary after the PR was created?
+9. Changes necessary after the PR was created?  
    Simply commit to the branch of your fork &rarr; the PR gets updated automatically
 
-10. PR review process successfully completed?
+10. PR review process successfully completed?  
     Then the PR will be merged by any of the maintainers and it’s time for 🎉
