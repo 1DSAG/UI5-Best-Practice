@@ -6,7 +6,7 @@ parent: i18n
 nav_order: 2
 ---
 
-# Usage of i18n in SAPUI5 Apps
+# Usage of i18n in UI5 Apps
 
 ## Setup
 
@@ -21,7 +21,7 @@ nav_order: 2
 
  3. configure the manifest.json
 
-    In our manifest.json we have to configure the above created i18n file under models area within SAPUI5 section as shown below. This code is placed in "sap.ui5" --> "models"
+    In our manifest.json we have to configure the above created i18n file under models area within UI5 section as shown below. This code is placed in "sap.ui5" --> "models"
 
     ```javascript
     "i18n": {
@@ -41,7 +41,7 @@ nav_order: 2
 Since we have defined a model in manifest.json, we access the individual keys in the XML view as with any other model.
 
 The i18n model is referenced first in curly brackets and then the key:
-"{i18n>streetNameNumber}"
+`{i18n>streetNameNumber}`
 
 We take as an example the already previously defined translations
 
