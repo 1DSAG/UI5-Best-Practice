@@ -95,7 +95,7 @@ Numbers, starting with 0, are placed in curly brackets. In case of multiple vari
 ### Good example:
 
 ```javascript
-    var sTranslatedText = this.getResourceBundle().getText("worklistTitle", iCounterVariable);
+    var sTranslatedText = this.getResourceBundle().getText("worklistTitle", [iCounterVariable]);
 ```
 <br/>
 </div>
