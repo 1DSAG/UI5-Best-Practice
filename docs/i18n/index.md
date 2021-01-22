@@ -23,7 +23,7 @@ important and helpful information.
 
 <div class="goodExample">
 
-- Good example:
+### Good example:
   - `i18n.properties`
   - `i18n_DE.properties`
 
@@ -32,7 +32,7 @@ important and helpful information.
 
 <div class="badExample">
 
-- Bad example:
+### Bad example:
   - `i18n.properties`
   - `i18n_DE.properties`
   - `i18n_DE_DE.properties`
