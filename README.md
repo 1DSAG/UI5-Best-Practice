@@ -52,6 +52,14 @@ You'll find more detailed instructions on each of the above below.
 
 - point your web browser to <http://localhost:4000>
 
+## Prerequisite for Win10 PC
+
+- Install <https://chocolatey.org/>
+- Install MSYS2 `choco install msys2` <https://chocolatey.org/packages/msys2>
+- Install Ruby `choco install ruby` <https://chocolatey.org/packages/ruby>
+- Update Build Toolchain `ridk install 3`
+- see setup local github pages site 😉
+
 ## linting of markdown content
 
 Any markdown content (in `/docs/**/*`) is linted via [`markdownlint`](https://github.com/DavidAnson/markdownlint) both for quality assurance and convenience.  
