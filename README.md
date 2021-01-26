@@ -16,11 +16,11 @@ The document is written in (github flavored) `markdown` and served via `jekyll` 
 You'll find more detailed instructions on each of the above below.
 
 <!--ts-->
-   * [DSAG's UI5 best practice guide](#dsags-ui5-best-practice-guide)
-      * [setup local github pages site](#setup-local-github-pages-site)
-      * [linting of markdown content](#linting-of-markdown-content)
-      * [git commit messages](#git-commit-messages)
-      * [example PR-based workflow](#example-pr-based-workflow)
+- [DSAG's UI5 best practice guide](#dsags-ui5-best-practice-guide)
+  - [setup local github pages site](#setup-local-github-pages-site)
+  - [linting of markdown content](#linting-of-markdown-content)
+  - [git commit messages](#git-commit-messages)
+  - [example PR-based workflow](#example-pr-based-workflow)
 
 <!-- Added by: runner, at: Mon Jan 11 15:27:45 UTC 2021 -->
 
@@ -148,7 +148,9 @@ Please refer to the [conventional commits website](https://www.conventionalcommi
    ![add a reviewer to the pull request](img/35-PR-reviewer.png)
 
 9. Changes necessary after the PR was created?  
-   Simply commit to the branch of your fork &rarr; the PR gets updated automatically
+   Simply commit to the branch of your fork  
+   &rarr; the PR gets updated automatically  
+   &rarr; move the PR into `draft` mode until ready (then move to `ready for review`)
 
 10. PR review process successfully completed?  
     Then the PR will be merged by any of the maintainers and it’s time for 🎉
