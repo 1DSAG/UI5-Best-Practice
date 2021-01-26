@@ -8,6 +8,12 @@ nav_order: 2
 
 # Advanced Features in i18n
 
+- [Placeholder in XML Views](#placeholder-in-xml-views)
+  - [Usage in 1.69 and above](#usage-in-169-and-above)
+  - [Usage in 1.68 and below](#usage-in-168-and-below)
+  - [Result](#result)
+- [ui5 tooling tasks](#codeui5-toolingcode-tasks)
+
 ## Placeholder in XML Views
 
 It is also possible to use the parameters directly in the XML view.
@@ -70,13 +76,20 @@ sap.ui.define([
 ### Result
 
 ![Usage of Placeholder in i18n in XML Views](img/i18n_PlaceholderXMLViews.png)
-:--: 
+:--:  
 *Usage of Placeholder in i18n in XML Views*
 
 ![Usage of Placeholder in i18n in XML Views](img/i18n_PlaceholderXMLViewsScreenshot.png)
-:--: 
+:--:  
 *Screenshot of Placeholder in i18n in XML Views*
 
 Ressoures:
 - [Stackoverflow Comment](https://stackoverflow.com/a/55587775/4743935)
 - [Openui5 Issue with Change to use declaration in XML View](https://github.com/SAP/openui5/issues/2475)
+
+## `ui5 tooling` tasks
+
+At the time of this writing, there are a couple of open source [`ui5-tooling`](https://github.com/SAP/ui5-tooling) tasks available that help with translation/internationlization efforts:
+
+- [`ui5-task-18ncheck`](https://github.com/petermuessig/ui5-ecosystem-showcase/tree/master/packages/ui5-task-i18ncheck): checking for missing translations in `i18n*`-files
+- [`ui5-task-translationhub`](https://github.com/DerGuteWolf/ui5-task-translationhub): automated upload, translation and download of `i18n*`-files
