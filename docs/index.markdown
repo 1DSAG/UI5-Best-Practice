@@ -43,7 +43,7 @@ layout: home
   - PWA
 - [UX (Janis)](#blank)
   - Fiori UX Guide (<https://experience.sap.com/fiori-design-web/sap-fiori/>)
-- [Extension of SAP Apps (tbd)](#blank)
+- [Extension of SAP Apps (Denny)](#blank)
 - [Security (tbd)](#blank)
   - WebSecurity in UI5 - Best Practices - Dos and Fonts
   - Authorizations in UI5 Apps - Best Practice on how to?
