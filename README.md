@@ -34,10 +34,10 @@ You'll find more detailed instructions on each of the above below.
   `$> cd docs`
 - `$> bundle install`  
   for installing the `github-pages` jekyll incarnation
-- start the local gh-pages instance
+- start the local gh-pages instance, including automatic browser live-reload
 
   ```shell
-  bundle exec jekyll serve
+  bundle exec jekyll serve --livereload
   Configuration file: /Users/you/UI5-Best-Practice/docs/_config.yml
               Source: /Users/you/UI5-Best-Practice/docs
          Destination: /Users/you/UI5-Best-Practice/docs/_site
@@ -46,6 +46,7 @@ You'll find more detailed instructions on each of the above below.
          Jekyll Feed: Generating feed for posts
                       done in 0.233 seconds.
    Auto-regeneration: enabled for '/Users/you/UI5-Best-Practice/docs'
+   LiveReload address: http://127.0.0.1:35729
       Server address: http://127.0.0.1:4000/
     Server running... press ctrl-c to stop.
   ```
