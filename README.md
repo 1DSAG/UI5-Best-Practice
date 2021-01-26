@@ -16,11 +16,11 @@ The document is written in (github flavored) `markdown` and served via `jekyll` 
 You'll find more detailed instructions on each of the above below.
 
 <!--ts-->
-   * [DSAG's UI5 best practice guide](#dsags-ui5-best-practice-guide)
-      * [setup local github pages site](#setup-local-github-pages-site)
-      * [linting of markdown content](#linting-of-markdown-content)
-      * [git commit messages](#git-commit-messages)
-      * [example PR-based workflow](#example-pr-based-workflow)
+- [DSAG's UI5 best practice guide](#dsags-ui5-best-practice-guide)
+  - [setup local github pages site](#setup-local-github-pages-site)
+  - [linting of markdown content](#linting-of-markdown-content)
+  - [git commit messages](#git-commit-messages)
+  - [example PR-based workflow](#example-pr-based-workflow)
 
 <!-- Added by: runner, at: Mon Jan 11 15:27:45 UTC 2021 -->
 
@@ -128,6 +128,8 @@ Please refer to the [conventional commits website](https://www.conventionalcommi
 3. write, edit, code (most likely `markdown` content in `/docs/**/*`.  
    👨‍💻  
    repeat.
+
+   > note: we're using [`github flavoured markdown` (gfm)](https://github.github.com/gfm/) that allows for extended markdown formatting
 
    `git commit` early, `git commit` often  
    &rarr; watch out for the commit linting (see [git commit messages](#git-commit-messages))  
