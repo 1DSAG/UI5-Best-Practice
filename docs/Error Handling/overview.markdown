@@ -10,4 +10,4 @@ nav_order: 2
 Of course, error handling is very important.
 
 ## Files in the UI5 App
-Error Handling should be handled in a separate Javascript file.
+Error Handling should be handled in a separate JavaScript file.
