@@ -34,10 +34,10 @@ You'll find more detailed instructions on each of the above below.
   `$> cd docs`
 - `$> bundle install`  
   for installing the `github-pages` jekyll incarnation
-- start the local gh-pages instance
+- start the local gh-pages instance, including automatic browser live-reload
 
   ```shell
-  bundle exec jekyll serve
+  bundle exec jekyll serve --livereload
   Configuration file: /Users/you/UI5-Best-Practice/docs/_config.yml
               Source: /Users/you/UI5-Best-Practice/docs
          Destination: /Users/you/UI5-Best-Practice/docs/_site
@@ -46,6 +46,7 @@ You'll find more detailed instructions on each of the above below.
          Jekyll Feed: Generating feed for posts
                       done in 0.233 seconds.
    Auto-regeneration: enabled for '/Users/you/UI5-Best-Practice/docs'
+   LiveReload address: http://127.0.0.1:35729
       Server address: http://127.0.0.1:4000/
     Server running... press ctrl-c to stop.
   ```
@@ -150,7 +151,9 @@ Please refer to the [conventional commits website](https://www.conventionalcommi
    ![add a reviewer to the pull request](img/35-PR-reviewer.png)
 
 9. Changes necessary after the PR was created?  
-   Simply commit to the branch of your fork &rarr; the PR gets updated automatically
+   Simply commit to the branch of your fork  
+   &rarr; the PR gets updated automatically  
+   &rarr; move the PR into `draft` mode until ready (then move to `ready for review`)
 
 10. PR review process successfully completed?  
     Then the PR will be merged by any of the maintainers and it’s time for 🎉
