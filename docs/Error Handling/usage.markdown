@@ -14,3 +14,4 @@ This article describes how to the error handler in a separate file.
 ## Setup
 
  1. Add a new file called ErrorHandler.js in folder webapp/controller.
+ 2. Insert
