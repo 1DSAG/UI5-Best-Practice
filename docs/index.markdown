@@ -41,7 +41,7 @@ layout: home
 - [UI-Client (tbd)](#blank)
   - Camera , GPS , ..
   - PWA
-- [UX (Janis)](#blank)
+- [UX (Janis)](design-guidelines)
   - Fiori UX Guide (<https://experience.sap.com/fiori-design-web/sap-fiori/>)
 - [Extension of SAP Apps (Denny)](#blank)
 - [Security (tbd)](#blank)
