@@ -9,7 +9,7 @@ layout: home
 
 - [Error Handling (Tobias)](#blank)
 - [i18n (Marian)](i18n)
-- [Naming Convetion (tbd)](#blank)
+- [Naming Convention (Adrian)](nc)
 - [Patterns (tbd)](#blank)
 - [Layouts (tbd)](#blank)
 - [Navigation (tbd)](#blank)
@@ -18,9 +18,12 @@ layout: home
 - [oData v2,v4, REST (tbd)](#blank)
   - Do and Don'ts
   - Don't: Plain Ajax Requests
+- [Model-View-Controller (Adrian)](mvc)
+  - Do's and Don'ts
+    - Do: Smart Controls
 - [Controls (tbd)](#blank)
   - Do's and Don'ts
-    - Do:  Smart Controls
+    - Do: Smart Controls
 - [Custom Controls (tbd)](#blank)
   - Wow to create and use custom controls?
 - [Fiori Elements vs. Free-Style (tbd)](#blank)
@@ -48,6 +51,7 @@ layout: home
   - WebSecurity in UI5 - Best Practices - Dos and Fonts
   - Authorizations in UI5 Apps - Best Practice on how to?
 - [Tipps (tbd)](#blank)
+
   - Client Debugging - Best Practice on how to?
 
 - To be defined
