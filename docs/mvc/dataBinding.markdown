@@ -6,7 +6,7 @@ parent: Model View Controller
 nav_order: 2
 ---
 
-# Make use Data Binding
+# Make use of Data Binding
 
 Instead of manipulating the behavior of your control
 
@@ -27,4 +27,4 @@ and work on the data model:
     oDisplayModel.setProperty("/firstName", "Doe");
     oDisplayModel.setProperty("/lastName", "Doe");
 
-This pays off especially when working with dynamic arrays being visualized by list or tables!
+This pays off especially when working with dynamic arrays being visualized by lists or tables! You feed the model with updated data and data binding will re-render the controls for you automatically.

@@ -15,7 +15,7 @@ Keep commonly used methods such as
 - getModel
 - setModel
 - onNavBack
-- _or whatever method or property is being actively re-used inside your project_
+- _or whatever method or property is being re-used in other controllers in the application_
 
 inside a base controller:
 
