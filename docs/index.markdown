@@ -7,7 +7,7 @@ layout: home
 
 # Topic Collection
 
-- [Error Handling (Tobias)](#blank)
+- [Error Handling (Tobias)](Error Handling)
 - [i18n (Marian)](i18n)
 - [Naming Convetion (tbd)](#blank)
 - [Patterns (tbd)](#blank)
