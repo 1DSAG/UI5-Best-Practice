@@ -24,8 +24,8 @@ layout: home
 - [Controls (tbd)](#blank)
   - Do's and Don'ts
     - Do: Smart Controls
-- [Custom Controls (tbd)](#blank)
-  - Wow to create and use custom controls?
+- [Custom Controls (@Lex)](#blank)
+  - How to create and use custom controls?
 - [Fiori Elements vs. Free-Style (tbd)](#blank)
   - When use what
 - [Anotations XML vs Backend (tbd)](#blank)
@@ -55,8 +55,8 @@ layout: home
   - Client Debugging - Best Practice on how to?
 
 - To be defined
-  - Validations
+  - [Validations (@Lex)](#blank)
     - how do I validate forms and fields generically?
-  - External Libraries - how do I integrate them in my UI5 project?
+  - [External Libraries - how do I integrate them in my UI5 project? (@Lex)](#blank)
   - Upload (Cloud/onPremise) - Best Practice on how to?
   - Encapsulation / Structuring of Code / MVC Concept?
