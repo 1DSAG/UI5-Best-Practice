@@ -15,7 +15,7 @@ layout: home
 - [Navigation (tbd)](#blank)
   - Routing
   - DeepLinks
-- [oData v2,v4, REST (tbd)](#blank)
+- [oData v2,v4, REST (@Herbert)](odata)
   - Do and Don'ts
   - Don't: Plain Ajax Requests
 - [Model-View-Controller (Adrian)](mvc)
