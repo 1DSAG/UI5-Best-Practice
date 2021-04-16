@@ -3,7 +3,7 @@ layout: default
 title: V2 vs. V4
 name: vs2vsv4
 parent: oData
-nav_order: 1
+nav_order: 2
 ---
 
 ## Major Differences
