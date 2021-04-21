@@ -23,7 +23,7 @@ should be kept as short as possible. When creating it, you should
 avoid regions, script or subtags as far as possible - unless you add
 important and helpful information.
 
-<div class="goodExample">
+<div class="goodExample" markdown=1>
 
 ### Good example
 
@@ -32,7 +32,7 @@ important and helpful information.
 
 </div>
 
-<div class="badExample">
+<div class="badExample" markdown=1>
 
 ### Bad example
 

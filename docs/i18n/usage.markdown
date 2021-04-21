@@ -90,7 +90,7 @@ Numbers, starting with 0, are placed in curly brackets. In case of multiple vari
 *Usage of Placeholder in i18n*
 
 
-<div class="goodExample">
+<div class="goodExample"  markdown=1>
 
 ### Good example:
 
@@ -100,7 +100,7 @@ Numbers, starting with 0, are placed in curly brackets. In case of multiple vari
 <br/>
 </div>
 
-<div class="badExample">
+<div class="badExample"  markdown=1>
 
 ### Bad example:
 
