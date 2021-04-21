@@ -2,13 +2,13 @@
 layout: default
 title: Dos and Don'ts
 name: doAndDont
-parent: oData
+parent: OData
 nav_order: 4
 ---
 
 ## Dos and Don'ts
 
-This section contains useful dos and don'ts for developers programming SAP Gateway applications and optimizing performance.
+This section contains useful dos and don'ts for developers programming SAPUI5 applications using OData and optimizing its performance.
 
 ### Dos
 
@@ -45,7 +45,11 @@ Make as many properties as possible filterable. At least all primary and foreign
 
 #### * Do make your properties concrete
 
+Do not name your properties like "data" or "dynamicData" and so on. You must not include dynamic JSON data within your properties (eg. a property called data containing a dynamic JSON string).
+
 #### * Do use the right data type for your properties
+
+For more information, see: [ABAP Dictionary Type to EDM.Type Mapping](https://help.sap.com/viewer/68bf513362174d54b58cddec28794093/7.51.6/en-US/54a326519eff236ee10000000a445394.html).
 
 #### * Do represent quantities and monetary amounts as Edm.Decimal
 
@@ -66,6 +70,8 @@ Another benefit is performance. Binary data as a media resource is streamed dire
 If your model contains Customers and SalesOrders, provide navigation between them as `/Customers(4711)/SalesOrders` and `/SalesOrders(42)/Customer`. This will ensure that the client knows how to construct a query on SalesOrders using a CustomerID, or the URI of the customer resource from the CustomerID.
 
 If one of your entity types has an xxxID property, make sure you also provide a corresponding xxx entity type and navigation to it. The same applies for xxxCode; provide an entity set that lists all possible code values and meaningful descriptions for them. The service should be self-describing.
+
+It is possible to create a referential constraints for an association. A referential constraint is similar to a relational database table foreign key, defining relationships between and within tables.
 
 #### * Do follow links provided by the server
 

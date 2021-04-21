@@ -1,9 +1,9 @@
 ---
 layout: default
-title: oData
+title: OData
 permalink: /odata/
 has_children: true
 nav_order: 2
 ---
 
-## oData
+## OData

@@ -2,7 +2,7 @@
 layout: default
 title: General Information
 name: general
-parent: oData
+parent: OData
 nav_order: 1
 ---
 
@@ -18,7 +18,7 @@ OData uses URIs to identify resources. For every OData service whose service roo
 
 The service document lists entity sets, functions, and singletons that can be retrieved. Clients can use the service document to navigate the model in a hypermedia-driven fashion.
 
-The service document is available at <http://host/service/>.
+The service document is available at the "doc root"/service-root: <http://host/service/>.
 
 #### The Metadata Document
 
@@ -30,8 +30,8 @@ The metadata document is available at <http://host/service/$metadata>.
 
 OData uses the HTTP verbs to indicate the operations on the resources.
 
-* GET: Get the resource (a collection of entities, a single entity, a structural property, a navigation property, a stream, etc.).
-* POST: Create a new resource.
-* PUT: Update an existing resource by replacing it with a complete instance.
-* PATCH: Update an existing resource by replacing part of its properties with a partial instance.
-* DELETE: Remove the resource.
+* `GET`: Get the resource (a collection of entities, a single entity, a structural property, a navigation property, a stream, etc.).
+* `POST`: Create a new resource.
+* `PUT`: Update an existing resource by replacing it with a complete instance.
+* `PATCH`: Update an existing resource by replacing part of its properties with a partial instance.
+* `DELETE`: Remove the resource.
