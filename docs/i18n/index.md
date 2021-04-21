@@ -49,23 +49,23 @@ important and helpful information.
 The individual translations are stored in the i18n folder with the prefix i18n_ and the corresponding language tag.
 In addition, a default file is defined which is automatically called if no language is specified.
 
-![UI5 i18n Files and Folder](img/i18nFilesFilder.png)
-:--:
-*UI5 i18n Files and Folder*
+| ![UI5 i18n Files and Folder](img/i18nFilesFilder.png) |
+|:--:|
+| *UI5 i18n Files and Folder* |
 
 Here are two simple examples, for a German and an English translation.
 The "keys" are always identical and will be retrieved later by App based on them. The keys are written in (lower) camelCase.
 
-![i18n Simple Example DE File](img/i18n_de_simple.png)
-:--:
-*i18n Simple Example DE File*
+| ![i18n Simple Example DE File](img/i18n_de_simple.png) |
+| :--: |
+| *i18n Simple Example DE File* |
 
-![i18n Simple Example EN File](img/i18n_en_simple.png)
-:--:
-*i18n Simple Example EN File*
+| ![i18n Simple Example EN File](img/i18n_en_simple.png) |
+| :--: |
+| *i18n Simple Example EN File* |
 
 It is also possible to connect the i18n keys with a point to get a better overview. You can still use here camelCase.
 
-![i18n example with dot notation](img/i18_en_alternative.png)
-:--:
-*i18n example with dot notation*
+| ![i18n example with dot notation](img/i18_en_alternative.png) |
+| :--: |
+| *i18n example with dot notation* |
