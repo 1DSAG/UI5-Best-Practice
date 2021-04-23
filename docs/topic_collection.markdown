@@ -35,11 +35,11 @@ nav_order: 99
   - WebApp Folder vs Backend
 - [Testing (@vobu)](#blank)
   - OPA
-- [Tooling (tbd)](#blank)
+- [Tooling (@treee111)](#blank)
   - CI|CD
   - App Versioning - Best practice to follow up on Versions (Support)
   - UI5 Generator (<https://github.com/SAP/generator-easy-ui5>)
-- [IDE (@Christian)](#blank)
+- [IDE (@Christian, @treee111)](#blank)
   - VSCode / BAS
 - [Performance (tbd)](#blank)
   - Async vs Sync
