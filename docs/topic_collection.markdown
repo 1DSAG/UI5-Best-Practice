@@ -54,7 +54,7 @@ nav_order: 99
 - [Security (tbd)](#blank)
   - WebSecurity in UI5 - Best Practices - Dos and Fonts
   - Authorizations in UI5 Apps - Best Practice on how to?
-- [Tipps (@loelker )](#blank)
+- [Tipps (@loelker)](#blank)
 
   - Client Debugging - Best Practice on how to?
 
