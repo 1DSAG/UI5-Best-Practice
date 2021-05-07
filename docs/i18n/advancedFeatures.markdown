@@ -8,11 +8,12 @@ nav_order: 2
 
 # Advanced Features in i18n
 
-- [Placeholder in XML Views](#placeholder-in-xml-views)
-  - [Usage in 1.69 and above](#usage-in-169-and-above)
-  - [Usage in 1.68 and below](#usage-in-168-and-below)
-  - [Result](#result)
-- [ui5 tooling tasks](#codeui5-toolingcode-tasks)
+- [Advanced Features in i18n](#advanced-features-in-i18n)
+  - [Placeholder in XML Views](#placeholder-in-xml-views)
+    - [Usage in 1.69 and above](#usage-in-169-and-above)
+    - [Usage in 1.68 and below](#usage-in-168-and-below)
+    - [Result](#result)
+  - [`ui5 tooling` tasks](#ui5-tooling-tasks)
 
 ## Placeholder in XML Views
 
@@ -75,13 +76,13 @@ sap.ui.define([
 
 ### Result
 
-![Usage of Placeholder in i18n in XML Views](img/i18n_PlaceholderXMLViews.png)
-:--:  
-*Usage of Placeholder in i18n in XML Views*
+| ![Usage of Placeholder in i18n in XML Views](img/i18n_PlaceholderXMLViews.png) |
+| :--: |
+| *Usage of Placeholder in i18n in XML Views* |
 
-![Usage of Placeholder in i18n in XML Views](img/i18n_PlaceholderXMLViewsScreenshot.png)
-:--:  
-*Screenshot of Placeholder in i18n in XML Views*
+| ![Usage of Placeholder in i18n in XML Views](img/i18n_PlaceholderXMLViewsScreenshot.png) |
+| :--:  |
+| *Screenshot of Placeholder in i18n in XML Views* |
 
 Ressoures:
 - [Stackoverflow Comment](https://stackoverflow.com/a/55587775/4743935)

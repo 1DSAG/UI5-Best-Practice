@@ -18,9 +18,9 @@ In general, the handling of translated texts is very well documented in the SAP 
 
     The folder should be created in the "webapp" folder
 
-    ![Folder Structure and Init File for i18n](img/i18n_folderstructure.png)
-    :--: 
-    *Folder Structure and Init File for i18n*
+    | ![Folder Structure and Init File for i18n](img/i18n_folderstructure.png) |
+    | :--: |
+    | *Folder Structure and Init File for i18n* |
 
  3. configure the manifest.json
 
@@ -34,9 +34,9 @@ In general, the handling of translated texts is very well documented in the SAP 
             }
     ```
 
-    ![Folder Structure and Init File for i18n](img/i18n_manifest.png)
-    :--: 
-    *Folder Structure and Init File for i18n*
+    | ![Folder Structure and Init File for i18n](img/i18n_manifest.png) |
+    | :--:  |
+    | *Folder Structure and Init File for i18n* |
 
 
 ## Usage in XML Views
@@ -48,13 +48,13 @@ The i18n model is referenced first in curly brackets and then the key:
 
 We take as an example the already previously defined translations
 
-![i18n Simple Example EN File](img/i18n_en_simple.png)
-:--: 
-*i18n Simple Example EN File*
+| ![i18n Simple Example EN File](img/i18n_en_simple.png) |
+| :--:  |
+| *i18n Simple Example EN File* |
 
-![i18n example XML View](img/i18nXMLViewExample.png)
-:--: 
-*i18n example XML View*
+| ![i18n example XML View](img/i18nXMLViewExample.png) |
+| :--: |
+ |*i18n example XML View* |
 
 ## Usage in Controllers
 
@@ -85,12 +85,12 @@ It is good practice to mark variables in texts with placeholders and not concate
 Variables are set in the strings in the i18n.properties files.
 Numbers, starting with 0, are placed in curly brackets. In case of multiple variables the numbers are counted up.
 
-![Usage of Placeholder in i18n](img/i18nPlaceholer.png)
-:--: 
-*Usage of Placeholder in i18n*
+| ![Usage of Placeholder in i18n](img/i18nPlaceholer.png) |
+| :--: |
+| *Usage of Placeholder in i18n* |
 
 
-<div class="goodExample">
+<div class="goodExample"  markdown=1>
 
 ### Good example:
 
@@ -100,7 +100,7 @@ Numbers, starting with 0, are placed in curly brackets. In case of multiple vari
 <br/>
 </div>
 
-<div class="badExample">
+<div class="badExample"  markdown=1>
 
 ### Bad example:
 

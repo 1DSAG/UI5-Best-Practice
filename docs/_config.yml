@@ -26,7 +26,7 @@ baseurl: "/UI5-Best-Practice" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: _dsag
 github_username:  DSAGadmin
-markdown: GFM
+markdown: kramdown
 logo: "/assets/images/DSAGLogo.svg"
 
 # Build settings
