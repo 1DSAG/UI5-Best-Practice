@@ -10,10 +10,14 @@ nav_order: 6
 
 This chapter focuses on asynchronous backend OData calls. It shows how you can make your OData calls "Promise ready".
 
-### ECMAScript 5
+### Normal ECMAScript 5 Projects
+
+> IE11 compatible
 
 Find out how to wrap your OData calls with [Promises](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Promises) and make use of the Promise Chain feature.
 
-### ECMAScript 6
+### Modern ECMAScript 6 Projects
+
+> Requires modern Browsers
 
 If your project uses modern Javascript, you can consume Promises using the [Async / Await](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await) pattern and handle OData calls as if they where synchronous.
