@@ -42,7 +42,7 @@ nav_order: 99
   - UI5 Generator (<https://github.com/SAP/generator-easy-ui5>)
 - [IDE (@Christian, @treee111)](#blank)
   - VSCode / BAS
-- [Performance (tbd)](#blank)
+- [Performance (@evilru)](#blank)
   - Async vs Sync
   - Promise
 - [UI-Client (tbd)](#blank)
