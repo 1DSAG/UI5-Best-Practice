@@ -33,7 +33,8 @@ if you see the following:
 GET ~/EntitySet?$filter=...&$orderby=...&$top=...
 ```
 
-OData does not distinguish GetList from GetDetail. OData clients expect to obtain all information from reading an entity set. If the information is not transparent and comprehensive, OData clients might attempt subsequent updates that could lead to errors in your data.
+OData does not distinguish GetList from GetDetail. OData clients expect to obtain all information from reading an entity set. Take a simple UI5 master/detail application as an example. The OData model retrieves data via the master list binding. It is common practice to use relative binding for the detail page if the user navigates to one. The client will now use the same binding path as the master page does.
+If the information is not transparent and comprehensive, OData clients might attempt subsequent updates that could lead to errors in your data. Thinking of the example above, if your detail page modifies or deletes data of its relative binding path, also the data of your master page will be modified. This could lead to errors or incoherence in the data.
 
 #### * Do use the OData system query options $filter, $top, $skip, $orderby
 

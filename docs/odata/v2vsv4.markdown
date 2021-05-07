@@ -13,6 +13,7 @@ These are the major differences between OData V4 and OData V4:
 ### Metadata control
 
 In OData V4, the JSON data format now allows to control the amount of metadata that is returned in query responses. There are three levels of metadata supported [(see details)](http://docs.oasis-open.org/odata/odata-json-format/v4.0/os/odata-json-format-v4.0-os.html#_Toc372793040):
+
 * `full`: The response contains all the metadata needed to describe the response.
 * `minimal`: The response metadata references the metadata document. Information in the metadata document is not repeated in the response.
 * `none`: The response contains no metadata. The application must understand the response structure.
@@ -28,14 +29,26 @@ The `$expand` system query option has been enhanced in OData V4. This feature sp
 Example: Get all teams that have at least one employee who is older than 42
 
 ```js
-oTeamsBinding.filter(
-    new sap.ui.model.Filter({
-        path : "EMPLOYEES",
-        operator : sap.ui.model.FilterOperator.Any,
-        variable : "employee",
-        condition : new sap.ui.model.Filter("employee/AGE", sap.ui.model.FilterOperator.GT, 42)
+sap.ui.define([
+    "sap/ui/core/mvc/Controller",
+    "sap/ui/model/Filter",
+    "sap/ui/model/FilterOperator"
+], function(Controller, Filter, FilterOperator) {
+    "use strict";
+    return Controller.extend("dsag.filter.Example", {
+        // ...
+        filterTeams: function() {
+            oTeamsBinding.filter(
+                new Filter({
+                    path : "EMPLOYEES",
+                    operator : FilterOperator.Any,
+                    variable : "employee",
+                    condition : new Filter("employee/AGE", FilterOperator.GT, 42)
+                });
+            );
+        }
     });
-);
+});
 ```
 
 The resulting request would be:
@@ -48,6 +61,7 @@ $count replaces `$inlinecount` in OData V4. `$count` has been enhanced to be use
 ### Datatypes
 
 Changes in support for data types in OData V4:
+
 * `Edm.DateTime` has been deprecated. The lack of timezone information in OData 2 causes significant problems. Use `Edm.DateTimeOffset` instead.
 * `Edm.Time` has been replaced with `Edm.Duration` and `Edm.TimeOfDay` to make it clear whether it is duration of a specific time of day.
 * `Edm.Date` has been added as there was no way to express just a date in OData 2.
@@ -101,6 +115,6 @@ The UI5 OData V4 model does not support methods `getServiceAnnotations`, `getSer
 
 ## NOTE
 
-Due to the limited feature scope of this version of the SAPUI5 OData V4 model, check that all required features are in place before developing applications. Double check the detailed [documentation](https://help.sap.com/viewer/468a97775123488ab3345a0c48cadd8f/1809.000/en-US/e1b625940c104b558e52f47afe5ddb4f.html) of the features, as certain parts of a feature may be missing although you might expect these parts as given. Some controls might not work due to small incompatibilities compared to `sap.ui.model.odata.(v2.)ODataModel`, or due to missing features in the model (like tree binding). This also applies to SmartControls (`sap.ui.comp`) and Fiori Elements which do not support the SAPUI5 OData V4 model in general as well as to controls like TreeTable and AnalyticalTable which are not supported in conjunction with the SAPUI5 OData V4 model. The interface for applications has been changed for easier and more efficient use of the model.
+Due to the limited feature scope of this version of the SAPUI5 OData V4 model, check that all required features are in place before developing applications. Double check the detailed [documentation](https://help.sap.com/viewer/468a97775123488ab3345a0c48cadd8f/1809.000/en-US/e1b625940c104b558e52f47afe5ddb4f.html) of the features, as certain parts of a feature may be missing although you might expect these parts as given. Some controls might not work due to small incompatibilities compared to `sap.ui.model.odata.(v2.)ODataModel`, or due to missing features in the model (like tree binding).
 
 ---
