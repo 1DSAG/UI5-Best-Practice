@@ -8,9 +8,15 @@ nav_order: 2
 
 ## async / await
 
-I suggest reading the Promise chapter before.
+[async / await](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await) is not compatible with IE 11!
+
+I suggest reading the [Promise](promise.md) chapter first.
 
 ### Get the Promisified OData call ES6 ready
+
+You could use the [Promisified OData call](promise.html#promisified-odata-call), but why not use modern syntax? 😎
+
+Documentation of the used features:
 
 * [Destructuring assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
 * [Default parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)
