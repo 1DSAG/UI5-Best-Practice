@@ -66,7 +66,7 @@ The "keys" are always identical and will be retrieved later by App based on them
 
 It is also possible to connect the i18n keys with a point to get a better overview. You can still use here camelCase.
 
-| ![i18n example with dot notation](img/i18_en_alternative.png) |
+| ![i18n example with dot notation](img/i18_en_alternative.png)|
 | :--: |
 | *i18n example with dot notation* |
 
@@ -74,8 +74,8 @@ It is also possible to connect the i18n keys with a point to get a better overvi
 
 Annotations in the i18n files are helpful to understand how the i18n texts are used in the app. Annotations are inserted as comments and include a text type classification, an optional length restriction and a freetext explanation.
 
-![i18n example with annotations](img/i18n_en_annotaions.png)
-:--: 
-*i18n example with annotations*
+| ![i18n example with annotations](img/i18n_en_annotaions.png) |
+| :--: |
+| *i18n example with annotations* |
 
-A list of the possible text classification can be found here: [Annotations in Translation Files](https://openui5.hana.ondemand.com/topic/831039835e7c4da3a8a0b49567573afe) 
+A list of the possible text classification can be found here: [Annotations in Translation Files](https://openui5.hana.ondemand.com/topic/831039835e7c4da3a8a0b49567573afe)
