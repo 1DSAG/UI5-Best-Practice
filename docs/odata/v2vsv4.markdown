@@ -8,7 +8,7 @@ nav_order: 2
 
 ## Major Differences
 
-These are the major differences between OData V4 and OData V4:
+These are the major differences between OData V2 and OData V4:
 
 ### Metadata control
 
