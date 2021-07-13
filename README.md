@@ -52,7 +52,12 @@ This will
 - Install the required npm packages
 - Install the required ruby gems
 
-The only thing left to do is open the console in Visual Studio Code (it is attached to the running Development Container), navigate into the docs folder and start the Development Server (see below).
+The only thing left to do is open the console in Visual Studio Code (it is attached to the running Development Container), navigate into the docs folder and start the Development Server:
+
+```shell
+cd docs
+bundle exec jekyll serve --livereload
+```
 
 ### local installation
 
