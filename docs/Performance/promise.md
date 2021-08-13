@@ -88,7 +88,7 @@ Now, let's make the OData call more robust for everyday usage:
 
 The UI5 framework detects when the same OData call is done multiple times. It does only one request and returns the same result object for every call. If this result object is being changed, it changes for all calls. To prevent this from happening, the result is being copied with `Object.assign()`.
 
-If you plan to use this with IE11, make sure to provide the [Object.assign Polyfill](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#polyfill).
+If you plan to use this with IE11, make sure to provide the [Object.assign Polyfill](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#polyfill). In case the Polyfill is not option for you, a simple `JSON.parse(JSON.stringify(data))` could do the trick as well.
 
 ```js
 /** 
