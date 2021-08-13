@@ -8,9 +8,21 @@ nav_order: 1
 
 ## Promise
 
-If you are new to Promises, I would suggest to make yourself familiar before continuing:
+With the help of Promises, you can easily
+
+* handle asynchronous methods
+* control the execution of async methods
+  * in parallel
+  * sequential
+* control the flow of async methods in success / error cases
+* enhance the UX with loading indicators
+* ...
+
+If you are new to Promises, please make yourself familiar before continuing:
 
 <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise>
+
+All OData calls used in this article refer to OData v2.
 
 ### Basic OData call
 
@@ -32,9 +44,9 @@ model.read("/MyEntitySet('12345')", {
 
 A wrapped version of the basic OData call.
 
-The key is given as parameter and the wrapping method returns a promise. The resolve / reject methods are used in the success / error callbacks to resolve or reject the Promise.
+The key is given as parameter and the wrapping method returns a promise. The `resolve` / `reject` methods are used in the `success` / `error` callbacks to resolve or reject the Promise.
 
-As the resolve method takes only one parameter, data and response are passed as object.
+As the `resolve` method takes only one parameter, data and response are passed as object.
 
 ```js
 function readMyEntity(id) {
@@ -52,7 +64,7 @@ function readMyEntity(id) {
 }
 ```
 
-The success and error handling can now be done after invoking the method.
+The success and error handling can now be done after invoking the method. This is done by applying the [Promise Chain Pattern](#chaining-multiple-odata-calls-together).
 
 ```js
 readMyEntity(12345)
@@ -71,10 +83,10 @@ readMyEntity(12345)
 Now, let's make the OData call more robust for everyday usage:
 
 * hand over the whole entity as object and construct the key from its data
-* provide an option to add additional data like filters to the call (mParameters as described in the [documentation](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.ODataModel%23methods/read))
-* make sure its not possible to provide success / error callbacks with the parameters object as this would break the promise functionality
+* provide an option to add additional data like filters to the call (`mParameters` as described in the [documentation](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.ODataModel%23methods/read))
+* make sure its not possible to provide `success` / `error` callbacks with the parameters object as this would break the promise functionality
 
-The UI5 framework detects when the same OData call is done multiple times. It does only one request and returns the same result object for every call. If this result object is being changed, it changes for all calls. To prevent this from happening, the result is being copied with Object.assign()
+The UI5 framework detects when the same OData call is done multiple times. It does only one request and returns the same result object for every call. If this result object is being changed, it changes for all calls. To prevent this from happening, the result is being copied with `Object.assign()`.
 
 If you plan to use this with IE11, make sure to provide the [Object.assign Polyfill](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#polyfill).
 
@@ -128,7 +140,7 @@ readMyEntity({ id: 12345 })
 ### Chaining multiple OData calls together
 
 Breaks after the first Promise which does not resolve.  
-The finally method is not supported by the Promise Polyfill for IE11.
+The `finally` method is not supported by the Promise Polyfill for IE11.
 
 <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises#chaining>
 
@@ -179,7 +191,16 @@ Promise.all([
 
 #### Promise.allSettled
 
-Waits until all Promises are fullfilled and tells the status as well as the result.
+Waits until all Promises are fullfilled/rejected and tells the status as well as the result.  
+For two Promises where the first resolves and the second gets rejected, this could like like this:
+
+```js
+// example result with two promises
+[
+  {status: "fulfilled", value: ...},
+  {status: "rejected",  reason: ...}
+]
+```
 
 <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled>
 
