@@ -8,7 +8,6 @@ nav_exclude: true
 
 ### Welcome to the DSAG´s UI5 Best Practice Guide
 
-
 If you want to contribue, head over to the GitHub Repository:
 [DSAG's UI5 best practice guide](https://github.com/1DSAG/UI5-Best-Practice)
 
