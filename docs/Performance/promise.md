@@ -170,7 +170,7 @@ readMyEntity({ id: 12345 })
 
 #### Promise.all
 
-Breaks with the first Promise that is rejected.
+Breaks with the first Promise that is rejected. The results are ordered the same way your promises where.
 
 <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all>
 
