@@ -1,34 +1,40 @@
 # DSAG's UI5 best practice guide
 
+![GitHub repo size](https://img.shields.io/github/repo-size/1DSAG/UI5-Best-Practice)
+![GitHub contributors](https://img.shields.io/github/contributors/1DSAG/UI5-Best-Practice)
+![GitHub](https://img.shields.io/github/license/1DSAG/UI5-Best-Practice)
+![GitHub stars](https://img.shields.io/github/stars/1DSAG/UI5-Best-Practice?style=social)
+![GitHub forks](https://img.shields.io/github/forks/1DSAG/UI5-Best-Practice?style=social)
+
 this is not the guide itself (it's over at <https://1dsag.github.io/UI5-Best-Practice/>), but the corresponding repository with instructions on how to contribute to the guide.
 
 Because **the DSAG UI5 best practice guide is a living document** 👨‍💻 - thriving on and with its' community 🥳
 
-The document is written in (github flavored) `markdown` and served via `jekyll` in `github pages` (<https://1dsag.github.io/UI5-Best-Practice/>). So the recommended contribution approach is to
+The document is written in (kramdown flavored) `markdown` and served via `jekyll` in `github pages` (<https://1dsag.github.io/UI5-Best-Practice/>).
 
-- fork the repo + create new branch locally
-- run the guide locally (`bundle exec jekyll serve`).  
-  write, edit, code (most likely in `/docs/**/*`).  
-  repeat.
-- push local branch to your fork, create a PR, assign a reviewer
-- 🙌
-
-You'll find more detailed instructions on each of the above below.
-
+## Table of contents
 <!--ts-->
-- [DSAG's UI5 best practice guide](#dsags-ui5-best-practice-guide)
-  - [setup local github pages site](#setup-local-github-pages-site)
-  - [linting of markdown content](#linting-of-markdown-content)
-  - [git commit messages](#git-commit-messages)
-  - [example PR-based workflow](#example-pr-based-workflow)
+* [Table of contents](#table-of-contents)
+* [Local Setup / Gettings started](#local-setup--gettings-started)
+  * [Recommended: Development Container](#recommended-development-container)
+    * [Getting Started](#getting-started)
+  * [Alternative:  Local installation](#alternative--local-installation)
+    * [Prerequisites for Windows](#prerequisites-for-windows)
+    * [Installation Steps](#installation-steps)
+* [Developing](#developing)
+  * [How to git commit messages](#how-to-git-commit-messages)
+* [Contributing](#contributing)
+  * [How to use Pull Requests in GitHub](#how-to-use-pull-requests-in-github)
+  * [linting of markdown content](#linting-of-markdown-content)
+* [Licensing](#licensing)
 
-<!-- Added by: runner, at: Mon Jan 11 15:27:45 UTC 2021 -->
+<!-- Added by: node, at: Sat 14 Aug 2021 10:56:14 AM UTC -->
 
 <!--te-->
 
-## setup local github pages site
+## Local Setup / Gettings started
 
-### Development Container
+### Recommended: Development Container
 
 This is the easiest way to have your development environment ready in no time.
 You get a ready to use configured Debian Container which is transparently used by Visual Studio Code.
@@ -37,20 +43,20 @@ You get a ready to use configured Debian Container which is transparently used b
 
 Install the following programs:
 
-- [Visual Studio Code](https://code.visualstudio.com/)
-- [Remote Containers Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
-- [Docker](https://code.visualstudio.com/docs/remote/containers)
+* [Visual Studio Code](https://code.visualstudio.com/)
+* [Remote Containers Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+* [Docker](https://code.visualstudio.com/docs/remote/containers)
 
 Clone the repository with the command _[Remote-Containers: Clone Repository in Container Volume...](https://code.visualstudio.com/docs/remote/containers-advanced#_use-clone-repository-in-container-volume)_
 
 This will
 
-- Clone the Repository in a Container Volume
-- Build the Docker Image
-- Start the Docker Container and map the required ports
-- Mount the created Container Volume
-- Install the required npm packages
-- Install the required ruby gems
+* Clone the Repository in a Container Volume
+* Build the Docker Image
+* Start the Docker Container and map the required ports
+* Mount the created Container Volume
+* Install the required npm packages
+* Install the required ruby gems
 
 The only thing left to do is open the console in Visual Studio Code (it is attached to the running Development Container), navigate into the docs folder and start the Development Server:
 
@@ -59,15 +65,25 @@ cd docs
 bundle exec jekyll serve --livereload
 ```
 
-### local installation
+### Alternative:  Local installation
 
-- make sure, `ruby` 2.7 is installed on your system
-- clone the repo
-- switch to the document base
+#### Prerequisites for Windows
+
+* Install <https://chocolatey.org/>
+* Install MSYS2 `choco install msys2` <https://chocolatey.org/packages/msys2>
+* Install Ruby `choco install ruby` <https://chocolatey.org/packages/ruby>
+* Update Build Toolchain `ridk install 3`
+* see setup local github pages site 😉
+
+#### Installation Steps
+
+* make sure, `ruby` 2.7 is installed on your system
+* clone the repo
+* switch to the document base
   `$> cd docs`
-- `$> bundle install`  
+* `$> bundle install`  
   for installing the `github-pages` jekyll incarnation
-- start the local gh-pages instance, including automatic browser live-reload
+* start the local gh-pages instance, including automatic browser live-reload
 
   ```shell
   bundle exec jekyll serve --livereload
@@ -84,23 +100,11 @@ bundle exec jekyll serve --livereload
     Server running... press ctrl-c to stop.
   ```
 
-- point your web browser to <http://localhost:4000>
+* point your web browser to <http://localhost:4000>
 
-### Prerequisite for Win10 PC
+## Developing
 
-- Install <https://chocolatey.org/>
-- Install MSYS2 `choco install msys2` <https://chocolatey.org/packages/msys2>
-- Install Ruby `choco install ruby` <https://chocolatey.org/packages/ruby>
-- Update Build Toolchain `ridk install 3`
-- see setup local github pages site 😉
-
-## linting of markdown content
-
-Any markdown content (in `/docs/**/*`) is linted via [`markdownlint`](https://github.com/DavidAnson/markdownlint) both for quality assurance and convenience.  
-For quality assurance, to have the markdown-files max standard compliant, so subsequent processing and exporting is possible without running into formatting issues.  
-For convenience, because small markdown formatting mistakes are automatically fixed via the `markdownlint` upon commit - the `markdownlint` [`cli`](https://github.com/igorshubovych/markdownlint-cli) injects those fixes prior to the git commit, so don’t be surprised 😉
-
-## git commit messages
+### How to git commit messages
 
 commit messages are linted in order to allow for automatic later processing into `CHANGELOG` et al documents.  
 The linting occurs against the standards defined in the ["conventional commit" guidelines](https://github.com/conventional-changelog/commitlint/tree/master/%40commitlint/config-conventional), based on [the Angular project ones](https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines).
@@ -117,17 +121,17 @@ The structure of a "conventional commit" message looks like:
 
 `<type>` can be any of
 
-- build
-- ci
-- chore
-- docs
-- feat
-- fix
-- perf
-- refactor
-- revert
-- style
-- test
+* build
+* ci
+* chore
+* docs
+* feat
+* fix
+* perf
+* refactor
+* revert
+* style
+* test
 
 So a minimal commit message could look like...
 
@@ -148,7 +152,9 @@ Closes #133
 
 Please refer to the [conventional commits website](https://www.conventionalcommits.org) for more details on all the possibilities of formatting a git commit message.
 
-## example PR-based workflow
+## Contributing
+
+### How to use Pull Requests in GitHub
 
 0. fork the repo  
    ![fork a github project](img/00-fork.png)
@@ -190,3 +196,13 @@ Please refer to the [conventional commits website](https://www.conventionalcommi
 
 10. PR review process successfully completed?  
     Then the PR will be merged by any of the maintainers and it’s time for 🎉
+
+### linting of markdown content
+
+Any markdown content (in `/docs/**/*`) is linted via [`markdownlint`](https://github.com/DavidAnson/markdownlint) both for quality assurance and convenience.  
+For quality assurance, to have the markdown-files max standard compliant, so subsequent processing and exporting is possible without running into formatting issues.  
+For convenience, because small markdown formatting mistakes are automatically fixed via the `markdownlint` upon commit - the `markdownlint` [`cli`](https://github.com/igorshubovych/markdownlint-cli) injects those fixes prior to the git commit, so don’t be surprised 😉
+
+## Licensing
+
+This project uses the MIT license : [LICENSE](LICENSE)
