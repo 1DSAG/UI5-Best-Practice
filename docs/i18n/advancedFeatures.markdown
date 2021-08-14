@@ -88,6 +88,15 @@ Ressoures:
 - [Stackoverflow Comment](https://stackoverflow.com/a/55587775/4743935)
 - [Openui5 Issue with Change to use declaration in XML View](https://github.com/SAP/openui5/issues/2475)
 
+### CodeSandbox Sample
+
+<iframe src="https://codesandbox.io/embed/morning-thunder-dj6ol?fontsize=14&module=%2Fsrc%2Fview%2FMainView.view.xml&theme=dark&view=editor"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="morning-thunder-dj6ol"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>
+
 ## `ui5 tooling` tasks
 
 At the time of this writing, there are a couple of open source [`ui5-tooling`](https://github.com/SAP/ui5-tooling) tasks available that help with translation/internationlization efforts:
