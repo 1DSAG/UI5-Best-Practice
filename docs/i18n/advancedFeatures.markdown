@@ -85,6 +85,7 @@ sap.ui.define([
 | *Screenshot of Placeholder in i18n in XML Views* |
 
 Ressoures:
+
 - [Stackoverflow Comment](https://stackoverflow.com/a/55587775/4743935)
 - [Openui5 Issue with Change to use declaration in XML View](https://github.com/SAP/openui5/issues/2475)
 
