@@ -15,10 +15,13 @@ For application-related messages from the controller, the methods displayError, 
 ## Setup
 
  1. Add a new file called ErrorHandler.js in folder webapp/controller.
- 2. Insert the source code of the error handler:
-<details>
-<summary>Open Error Handler Source Code Here or Download it with [English](DSAG_Sample_ErrorHandler_EN.js) or [German](DSAG_Sample_ErrorHandler_DE.js) Documentation</summary>
-<br>
+ 2. Insert the source code of the error handler. You can download the source code or copy it from the collapsed text.<br>
+        [Download Error Handler including English documentation comments](DSAG_Sample_ErrorHandler_EN.js)
+        [Download Error Handler including German documentation comments](DSAG_Sample_ErrorHandler_DE.js)
+    <br>
+    <details>
+    <summary>Open Error Handler Source Code</summary>
+    <br>
 
 ```js
 /**
@@ -508,4 +511,4 @@ sap.ui.define([
 <br>
 </details>
 
-3. In UI5Object.extend line (line 31), adjust the namespace and the component name of your SAPUI5 app.
+1. In UI5Object.extend line (line 31), adjust the namespace and the component name of your SAPUI5 app.
