@@ -1,26 +1,3 @@
----
-layout: default
-title: Sample Error Handler
-name: Sample
-parent: Error Handling
-nav_order: 4
----
-
-# Sample Error Handler
-
-At this point, a sample error handler is provided that takes into account the best practices described in this guide. 
-If the error handler is correctly integrated, messages from an OData V2 or Odata V4 service are automatically output in the designated control: Error messages in a Message Box, success messages in a Message Toast and a collection of messages in a Message View.
-For application-related messages from the controller, the methods displayError, displayWarning, displayInformation and displaySuccess are available.
-
-## Setup
-
- 1. Add a new file called ErrorHandler.js in folder webapp/controller.
- 2. Insert the source code of the error handler:
-<details>
-<summary>Open Error Handler Source Code Here or Download it with [English](DSAG_Sample_ErrorHandler_EN.js) or [German](DSAG_Sample_ErrorHandler_DE.js) Documentation</summary>
-<br>
-
-```js
 /**
  * DSAG Sample Error Handler
  * --------------------------------------------------------------------------------------------------------
@@ -504,8 +481,3 @@ sap.ui.define([
 		}
 	});
 });
-```
-<br>
-</details>
-
-3. In UI5Object.extend line (line 31), adjust the namespace and the component name of your SAPUI5 app.
