@@ -16,5 +16,6 @@ The SAP Fiori Guidelines consider error handling in several articles. The articl
 
 Above all, it is important to choose the right control: Error messages, warnings and information to be confirmed are displayed in a [Message Box](https://experience.sap.com/fiori-design-web/message-box/). Success messages should be displayed in an automatically disappearing [Message Toast](https://experience.sap.com/fiori-design-web/message-toast/). Don't display an error message in a message toast!
 
-Message boxes can be a stumbling block when it comes to setting the correct content density class. When calling a message box, the content density class must always be transferred. If this does not happen, the controls in the view and in the message box may be in different style classes, which does not look very professional.
+If you need to display multiple messages, use a [Message View](https://experience.sap.com/fiori-design-web/message-view/).
 
+Message boxes and message views can be a stumbling block when it comes to setting the correct content density class. When calling a message box, the content density class must always be transferred. If this does not happen, the controls in the view and in the message box may be in different style classes, which does not look very professional.
