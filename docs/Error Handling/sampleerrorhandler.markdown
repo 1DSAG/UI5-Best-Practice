@@ -16,8 +16,8 @@ For application-related messages from the controller, the methods displayError, 
 
  1. Add a new file called ErrorHandler.js in folder webapp/controller.
  2. Insert the source code of the error handler. You can download the source code or copy it from the collapsed text.<br>
-        [Error Handler (English documentation comments)](DSAG_Sample_ErrorHandler_EN.js) <br>
-        [Error Handler (German documentation comments)](DSAG_Sample_ErrorHandler_DE.js)
+        [Error Handler (English comments)](DSAG_Sample_ErrorHandler_EN.js) <br>
+        [Error Handler (German comments)](DSAG_Sample_ErrorHandler_DE.js)
     <br>
     <details>
     <summary>Open Error Handler Source Code</summary>
@@ -277,7 +277,7 @@ For application-related messages from the controller, the methods displayError, 
             },
 
             // ************************************************************************************************************
-            // Private Methoden: Verarbeitung der Nachrichten
+            // Private methods: Processing of messages
             // ************************************************************************************************************
 
             /**
@@ -511,4 +511,6 @@ For application-related messages from the controller, the methods displayError, 
     <br>
     </details>
 
-1. In UI5Object.extend line (line 31), adjust the namespace and the component name of your SAPUI5 app.
+3. In UI5Object.extend line (line 31), adjust the namespace and the component name of your SAPUI5 app.
+   [Adjust Namespace and Component Name](/img/NamespaceComponent.gif)
+4. Include the error handler file in Component.js by declaring it as a required resource in the document header.
