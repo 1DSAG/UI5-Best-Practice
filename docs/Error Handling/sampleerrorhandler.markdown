@@ -14,7 +14,8 @@ For application-related messages from the controller, the methods displayError, 
 
 ## Setup
 
- 1. Add a new file called ErrorHandler.js in folder webapp/controller.
+ 1. Add a new file called ErrorHandler.js in folder webapp/controller.<br>
+   <img src="img/NewFile.gif"/>
  2. Insert the source code of the error handler. You can download the source code or copy it from the collapsed text.<br>
         [Error Handler (English comments)](DSAG_Sample_ErrorHandler_EN.js) <br>
         [Error Handler (German comments)](DSAG_Sample_ErrorHandler_DE.js)
@@ -510,7 +511,62 @@ For application-related messages from the controller, the methods displayError, 
     ```
     <br>
     </details>
+<br>
 
-3. In UI5Object.extend line (line 31), adjust the namespace and the component name of your SAPUI5 app.
-   [Adjust Namespace and Component Name](/img/NamespaceComponent.gif)
-4. Include the error handler file in Component.js by declaring it as a required resource in the document header.
+3. In UI5Object.extend line (line 32), adjust the namespace and the component name of your SAPUI5 app.<br>
+   <img src="img/NamespaceComponent.gif"/><br><br>
+4. Include the error handler file in Component.js by declaring it as a required resource in the document header.<br>
+   <img src="img/Announce.gif"/><br><br>
+5. Initialise the error handler in the onInit method of Component.js by inserting the following code line:
+   ```js
+    this._oErrorHandler = new ErrorHandler(this);
+   ```
+   <br>
+   <img src="img/Initialise.gif"/><br><br>
+6. Make sure that the Component.js contains the method getContentDensityClass for the style class setting.   
+    <details>
+    <summary>If missing, copy and paste it from here.</summary>
+    <br>
+
+    ```js
+    getContentDensityClass : function () {
+        if (!this._sContentDensityClass) {
+            if (!Device.support.touch) {
+                this._sContentDensityClass = "sapUiSizeCompact";
+            } else {
+                this._sContentDensityClass = "sapUiSizeCozy";
+            }
+        }
+        return this._sContentDensityClass;
+    }
+    ```
+    
+    <br>
+    </details>
+
+
+If an OData V2 or OData V4 model is defined as the default model, the error handling for this model is now automatically adopted.<br>
+
+## Activate Non-Default-Model
+To activate error handling for a model that is not defined as the default model, the method addModelToHandle must be called transferring the corresponding model.<br>
+Example:
+```js
+var oSecondModel = this.getModel("secondModel");
+if (oSecondModel) {
+    // Activate message handling for second model:
+    this.getOwnerComponent()._oErrorHandler.addModelToHandle(oSecondModel);
+}
+```
+
+## Output of messages from application controller
+When using this error handler, it is recommended to output all messages from an application controller via this error handler, as it handles the display of several messages. This avoids, for example, several message boxes being displayed on top of each other.<br>
+Example for displaying an error message:
+
+```js
+// Read error message from i18n file:
+var sErrorMessage = this.readI18nText("errorMessage");
+// Get error handler from component property:
+var oErrorHandler = this.getOwnerComponent()._oErrorHandler;
+// Display error message using error handler:
+oErrorHandler.displayError(sErrorMessage);  
+```
