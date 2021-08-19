@@ -10,7 +10,7 @@ nav_order: 4
 
 At this point, a sample error handler is provided that takes into account the best practices described in this guide. 
 If the error handler is correctly integrated, messages from an OData V2 or Odata V4 service are automatically output in the designated control: Error messages in a Message Box, success messages in a Message Toast and a collection of messages in a Message View.
-For application-related messages from the controller, the methods displayError, displayWarning, displayInformation and displaySuccess are available.
+For application-related messages from the controller, the methods displayError, displayWarning, displayInformation and displaySuccess are provided.
 
 ## Setup
 

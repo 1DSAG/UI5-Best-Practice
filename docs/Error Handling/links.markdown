@@ -16,4 +16,8 @@ The SAP Fiori Guidelines article on message handling describes the things to con
 
 ## [Official SAPUI5 Documentation: Error, Warning and Info Messages](https://sapui5.hana.ondemand.com/#/topic/62b1481d3e084cb49dd30956d183c6a0)
 
-The article describes how to use the SAPUI5 Message Manager.
+The official SAPUI5 documentation article describes how to use the SAPUI5 Message Manager.
+
+## [Message Handling](https://sapui5.hana.ondemand.com/sdk/#/topic/f5df293b96dc41699b8b357e9bcf7ed6)
+
+Recommended guidelines for message handling from official SAPUI5 documentation.
