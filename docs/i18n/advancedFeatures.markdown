@@ -91,9 +91,9 @@ Ressoures:
 
 ### CodeSandbox Sample
 
-<iframe src="https://codesandbox.io/embed/morning-thunder-dj6ol?fontsize=14&module=%2Fsrc%2Fview%2FMainView.view.xml&theme=dark&view=editor"
+<iframe src="https://codesandbox.io/embed/github/1DSAG/UI5-Best-Practice-samples/tree/i18n/?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fview%2FMainView.view.xml&theme=dark&view=editor"
      style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
-     title="morning-thunder-dj6ol"
+     title="ui5-sandbox"
      allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
      sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
    ></iframe>
