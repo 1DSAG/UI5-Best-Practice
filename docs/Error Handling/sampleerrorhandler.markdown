@@ -560,7 +560,8 @@ if (oSecondModel) {
 ```
 
 ## Output of messages from application controller
-When using this error handler, it is recommended to output all messages from an application controller via this error handler, as it handles the display of several messages. This avoids, for example, several message boxes being displayed on top of each other.<br>
+When using this error handler, it is recommended to output all messages from an application controller via this error handler, as it handles the displaying of several messages. This avoids, for example, several message boxes being displayed on top of each other.<br>
+
 Example for displaying an error message:
 
 ```js
