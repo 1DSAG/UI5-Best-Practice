@@ -13,7 +13,7 @@ The following points should be observed with regard to error handling:
 ## Use a separate ErrorHandler.js file for error output
 
 A separate ErrorHandler.js file should at least display all error messages of the integrated OData service. 
-In the case of a service query, the event "error" should only be used to implement further processing in the event of an error. The output of the error message, on the other hand, should be automated via the separate error handler.
+The event "error", what is thrown by manual constructed oData queries, should only be used for a further processing of the error, not for displaying the error.
 
 Example: Don't do this:
 
@@ -48,13 +48,13 @@ A sample for a separate error handler file can be found in the section [Sample E
 
 ## Consider the SAP Fiori Guidelines
 
-The SAP Fiori Guidelines consider error handling in several articles. The article [Error, Warning and Info Messages](https://sapui5.hana.ondemand.com/#/topic/62b1481d3e084cb49dd30956d183c6a0) serves as the basis.
+The SAP Fiori Guidelines deal with error handling in several articles. The article [Error, Warning and Info Messages](https://sapui5.hana.ondemand.com/#/topic/62b1481d3e084cb49dd30956d183c6a0) serves as the basis.
 
-Above all, it is important to choose the right control: Error messages, warnings and information to be confirmed are displayed in a [Message Box](https://experience.sap.com/fiori-design-web/message-box/). Success messages should be displayed in an automatically disappearing [Message Toast](https://experience.sap.com/fiori-design-web/message-toast/). Don't display an error message in a message toast!
+An important first step is the selection of the right control: Error messages, warnings and information to be confirmed are displayed in a [Message Box](https://experience.sap.com/fiori-design-web/message-box/). Success messages should be displayed in an automatically disappearing [Message Toast](https://experience.sap.com/fiori-design-web/message-toast/). Don't display an error message in a message toast!
 
 If you need to display multiple messages, use a [Message View](https://experience.sap.com/fiori-design-web/message-view/).
 
-Message boxes and message views can be a stumbling block when it comes to setting the correct content density class. When calling a message box, the content density class must always be transferred. If this does not happen, the controls in the view and in the message box may be in different style classes, which does not look very professional.
+Make sure that message boxes and messages views use the correct content density class. When calling a message box, the style class must always be transferred. If this does not happen, the controls in the view and in the message box may be in different style classes, which does not look very professional.
 
 ## Send application-related messages from the frontend and technical or business messages from the backend
 
@@ -66,9 +66,9 @@ Subject-specific verifications, on the other hand, should take place in the back
 
 ## Also display several error messages at once
 
-An OData service can send a response with several error messages as a result of a request. It is also possible that several requests are made in parallel and that error messages from two different requests are sent to the frontend app. Last but not least, it is also possible that an error message is displayed from the controller and at that moment an error message from the backend reaches the frontend app. To summarise briefly: It is possible that several relevant messages exist at the same time. 
+An OData service can send a response with several error messages as a result of a request. It is also possible that several requests are made in parallel and that error messages from two different requests are sent to the frontend app. Likewise, it is also possible that an error message is displayed originating from the controller and at that moment an error message from the backend reaches the frontend app. To summarise briefly: It is possible that several relevant messages exist at the same time. 
 
-In the literature or in instructions on the internet, the following variant for the output of service errors is often found (don't use that):
+In the literature or in instructions on the internet, similar variants like the following for the output of service errors can be found (don't use that):
 
 ```js
 _showServiceError: function(sDetails) {
@@ -88,4 +88,4 @@ _showServiceError: function(sDetails) {
 
 This form of error output ensures that only one error is displayed and all other errors are ignored. Instead, in the case of multiple errors, you should use a message view instead of the message box. 
 
-An example for the implementation can be found in the [Sample Error Handler](sampleerrorhandler.markdown).
+An example for a smarter implementation can be found in the [Sample Error Handler](sampleerrorhandler.markdown).
