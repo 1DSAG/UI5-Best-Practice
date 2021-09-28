@@ -1,12 +1,14 @@
 ---
 layout: default
-title: SAP Fiori Elements vs. Freestyle
-name: SAP Fiori Elements vs. Freestyle
+title: Fiori Elements vs. Freestyle
+name: Fiori Elements vs. Freestyle
 permalink: /fiori_elements_freestyle/
-nav_order: 1
+nav_order: 35
 ---
 
-# SAP Fiori Elements vs. Freestyle
+<!-- markdownlint-disable MD025 -->
+
+# Fiori Elements vs. Freestyle
 
 There are two ways to develop your own Fiori applications: Either you start with a complete self-development ("freestyle") or you use the SAP Fiori Elements Framework.
 
