@@ -1,3 +1,11 @@
+---
+layout: default
+title: Deployments
+permalink: /deployments/
+has_children: false
+nav_order: 10
+---
+
 Deployment of UI5 apps to on premise systems
 ============================================
 
