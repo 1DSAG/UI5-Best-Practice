@@ -1,3 +1,13 @@
+---
+layout: default
+title: Testing
+permalink: /testing/
+has_children: false
+nav_order: 80
+---
+
+<!-- markdownlint-disable MD025 -->
+
 Automated Testing
 =================
 
