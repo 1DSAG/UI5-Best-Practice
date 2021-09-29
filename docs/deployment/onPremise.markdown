@@ -20,7 +20,7 @@ For global installation execute
 npm install ui5-nwabap-deployer-cli -g
 ```
 
-Please refer to the documentation of the node.js module (see references for the link) for detailed 
+Please refer to the documentation of the node.js module (see references for the link) for detailed
 installation instructions and further configuration options.
 
 Create a file called `ui5deployrc` in your project root.
