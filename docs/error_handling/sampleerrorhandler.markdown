@@ -8,7 +8,7 @@ nav_order: 4
 
 # Sample Error Handler
 
-At this point, a sample error handler is provided that takes into account the best practices described in this guide. 
+At this point, a sample error handler is provided that takes into account the best practices described in this guide.
 If the error handler is correctly integrated, messages from an OData V2 or Odata V4 service are automatically output in the designated control: Error messages in a Message Box, success messages in a Message Toast and a collection of messages in a Message View.
 For application-related messages from the controller, the methods displayError, displayWarning, displayInformation and displaySuccess are provided.
 
@@ -24,7 +24,8 @@ For application-related messages from the controller, the methods displayError, 
     <summary>Open Error Handler Source Code</summary>
     <br>
 
-    ```js
+    <pre>
+    <code>
     /**
     * DSAG Sample Error Handler
     * --------------------------------------------------------------------------------------------------------
@@ -508,10 +509,12 @@ For application-related messages from the controller, the methods displayError, 
             }
         });
     });
-    ```
-    
+    </code>
+    </pre>
+
     <br>
     </details>
+
 <br>
 
 3. In UI5Object.extend line (line 32), adjust the namespace and the component name of your SAPUI5 app.<br>
@@ -519,12 +522,14 @@ For application-related messages from the controller, the methods displayError, 
 4. Include the error handler file in Component.js by declaring it as a required resource in the document header.<br>
    <img src="img/Announce.gif"/><br><br>
 5. Initialise the error handler in the onInit method of Component.js by inserting the following code line:
+
    ```js
     this._oErrorHandler = new ErrorHandler(this);
    ```
+
    <br>
    <img src="img/Initialise.gif"/><br><br>
-6. Make sure that the Component.js contains the method getContentDensityClass for the style class setting.   
+6. Make sure that the Component.js contains the method getContentDensityClass for the style class setting.
     <details>
     <summary>If missing, copy and paste it from here.</summary>
     <br>
@@ -541,16 +546,17 @@ For application-related messages from the controller, the methods displayError, 
         return this._sContentDensityClass;
     }
     ```
-    
+
     <br>
     </details>
-
 
 If an OData V2 or OData V4 model is defined as the default model, the error handling for this model is now automatically adopted.<br>
 
 ## Activate Non-Default-Model
+
 To activate error handling for a model that is not defined as the default model, the method addModelToHandle must be called transferring the corresponding model.<br>
 Example:
+
 ```js
 var oSecondModel = this.getModel("secondModel");
 if (oSecondModel) {
@@ -560,6 +566,7 @@ if (oSecondModel) {
 ```
 
 ## Output of messages from application controller
+
 When using this error handler, it is recommended to output all messages from an application controller via this error handler, as it handles the displaying of several messages. This avoids, for example, several message boxes being displayed on top of each other.<br>
 
 Example for displaying an error message:

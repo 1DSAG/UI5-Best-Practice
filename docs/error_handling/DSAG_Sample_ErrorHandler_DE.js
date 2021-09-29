@@ -29,7 +29,7 @@ sap.ui.define([
 ], function (UI5Object, MessageBox) {
 	"use strict";
 
-	return UI5Object.extend("rewe.sf.sfazubirec.controller.ErrorHandler", {
+	return UI5Object.extend("[namespace].[component].controller.ErrorHandler", {
 
 		// ************************************************************************************************************
 		// Constructor

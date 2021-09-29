@@ -36,6 +36,6 @@
     }
   },
   "lint-staged": {
-    "*.md": "markdownlint --fix"
+    "*.md": "markdownlint -c .markdownlint.jsonc --fix"
   }
 }
