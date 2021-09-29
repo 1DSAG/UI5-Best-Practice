@@ -1,106 +1,11 @@
-# DSAG's UI5 best practice guide
-
-![GitHub repo size](https://img.shields.io/github/repo-size/1DSAG/UI5-Best-Practice)
-![GitHub contributors](https://img.shields.io/github/contributors/1DSAG/UI5-Best-Practice)
-![GitHub](https://img.shields.io/github/license/1DSAG/UI5-Best-Practice)
-![GitHub stars](https://img.shields.io/github/stars/1DSAG/UI5-Best-Practice?style=social)
-![GitHub forks](https://img.shields.io/github/forks/1DSAG/UI5-Best-Practice?style=social)
-
-this is not the guide itself (it's over at <https://1dsag.github.io/UI5-Best-Practice/>), but the corresponding repository with instructions on how to contribute to the guide.
-
-Because **the DSAG UI5 best practice guide is a living document** 👨‍💻 - thriving on and with its' community 🥳
-
-The document is written in (kramdown flavored) `markdown` and served via `jekyll` in `github pages` (<https://1dsag.github.io/UI5-Best-Practice/>).
-
 ## Table of contents
-<!--ts-->
-* [Table of contents](#table-of-contents)
-* [Local Setup / Gettings started](#local-setup--gettings-started)
-  * [Recommended: Development Container](#recommended-development-container)
-    * [Getting Started](#getting-started)
-  * [Alternative:  Local installation](#alternative--local-installation)
-    * [Prerequisites for Windows](#prerequisites-for-windows)
-    * [Installation Steps](#installation-steps)
+
 * [Developing](#developing)
   * [How to git commit messages](#how-to-git-commit-messages)
 * [Contributing](#contributing)
   * [How to use Pull Requests in GitHub](#how-to-use-pull-requests-in-github)
   * [linting of markdown content](#linting-of-markdown-content)
 * [Licensing](#licensing)
-
-<!-- Added by: node, at: Sat 14 Aug 2021 10:56:14 AM UTC -->
-
-<!--te-->
-
-## Local Setup / Gettings started
-
-### Recommended: Development Container
-
-This is the easiest way to have your development environment ready in no time.
-You get a ready to use configured Debian Container which is transparently used by Visual Studio Code.
-
-#### Getting Started
-
-Install the following programs:
-
-* [Visual Studio Code](https://code.visualstudio.com/)
-* [Remote Containers Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
-* [Docker](https://code.visualstudio.com/docs/remote/containers)
-
-Clone the repository with the command _[Remote-Containers: Clone Repository in Container Volume...](https://code.visualstudio.com/docs/remote/containers-advanced#_use-clone-repository-in-container-volume)_
-
-This will
-
-* Clone the Repository in a Container Volume
-* Build the Docker Image
-* Start the Docker Container and map the required ports
-* Mount the created Container Volume
-* Install the required npm packages
-* Install the required ruby gems
-
-The only thing left to do is open the console in Visual Studio Code (it is attached to the running Development Container), navigate into the docs folder and start the Development Server:
-
-```shell
-cd docs
-bundle exec jekyll serve --livereload
-```
-
-### Alternative:  Local installation
-
-#### Prerequisites for Windows
-
-* Install <https://chocolatey.org/>
-* Install MSYS2 `choco install msys2` <https://chocolatey.org/packages/msys2>
-* Install Ruby `choco install ruby` <https://chocolatey.org/packages/ruby>
-* Update Build Toolchain `ridk install 3`
-* see setup local github pages site 😉
-
-#### Installation Steps
-
-* make sure, `ruby` 2.7 is installed on your system
-* clone the repo
-* switch to the document base
-  `$> cd docs`
-* `$> bundle install`  
-  for installing the `github-pages` jekyll incarnation
-* start the local gh-pages instance, including automatic browser live-reload
-
-  ```shell
-  bundle exec jekyll serve --livereload
-  Configuration file: /Users/you/UI5-Best-Practice/docs/_config.yml
-              Source: /Users/you/UI5-Best-Practice/docs
-         Destination: /Users/you/UI5-Best-Practice/docs/_site
-   Incremental build: disabled. Enable with --incremental
-        Generating...
-         Jekyll Feed: Generating feed for posts
-                      done in 0.233 seconds.
-   Auto-regeneration: enabled for '/Users/you/UI5-Best-Practice/docs'
-   LiveReload address: http://127.0.0.1:35729
-      Server address: http://127.0.0.1:4000/
-    Server running... press ctrl-c to stop.
-  ```
-
-* point your web browser to <http://localhost:4000>
 
 ## Developing
 
@@ -202,7 +107,3 @@ Please refer to the [conventional commits website](https://www.conventionalcommi
 Any markdown content (in `/docs/**/*`) is linted via [`markdownlint`](https://github.com/DavidAnson/markdownlint) both for quality assurance and convenience.  
 For quality assurance, to have the markdown-files max standard compliant, so subsequent processing and exporting is possible without running into formatting issues.  
 For convenience, because small markdown formatting mistakes are automatically fixed via the `markdownlint` upon commit - the `markdownlint` [`cli`](https://github.com/igorshubovych/markdownlint-cli) injects those fixes prior to the git commit, so don’t be surprised 😉
-
-## Licensing
-
-This project uses the MIT license : [LICENSE](LICENSE)
