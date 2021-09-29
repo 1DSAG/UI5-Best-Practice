@@ -13,7 +13,7 @@ For a more streamlined development experience it is necessary not to switch out 
 Also for developers who are not familiar with SAP technology you may want to prepare a simpler way of deploying their
 UI5 application to an SAP on premise system.
 
-To accomplish this, you need to install the node.js module `ui5-nwabap-deployer-cli` with npm (either locally or globally)
+To accomplish this, you need to install the node.js module `ui5-nwabap-deployer-cli` with npm (either locally or globally).  
 For global installation execute
 
 ```shell
@@ -44,7 +44,7 @@ With this configuration it will reuse the transport if it is locked.
 To authenticate with your on premise system it is discouraged to put your credentials within the `ui5deployrc` file,
 because you will include it in your VCS.
 Instead you may inject your username and password from environment variables of your system, while calling the node
-module from the commandline. This procedure enabled you to even process your deployment from any CI/CD system.
+module from the commandline. This procedure enables you to even process your deployment from any CI/CD system.
 
 For this simple bash script to work, you have to export `SAP_ONPREMISE_USER` and `SAP_ONPREMISE_PASSWORD` before executing.
 It is best to add your variable definitions to your `.bashrc` to have them set in every future bash session.
