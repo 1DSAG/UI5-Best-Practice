@@ -142,6 +142,9 @@ readMyEntity({ id: 12345 })
 Breaks after the first Promise which does not resolve.  
 The `finally` method is not supported by the Promise Polyfill for IE11.
 
+when you call Promises within a then, return their result and continue with it from the next chained then.
+Beside Promises, you can also return static values.
+
 <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises#chaining>
 
 ```js
