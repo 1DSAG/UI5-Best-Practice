@@ -79,3 +79,4 @@ Annotations in the i18n files are helpful to understand how the i18n texts are u
 | *i18n example with annotations* |
 
 A list of the possible text classification can be found here: [Annotations in Translation Files](https://openui5.hana.ondemand.com/topic/831039835e7c4da3a8a0b49567573afe)
+
