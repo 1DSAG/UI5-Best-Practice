@@ -15,7 +15,8 @@
   "extensions": [
     "dbaeumer.vscode-eslint",
     "editorconfig.editorconfig",
-    "davidanson.vscode-markdownlint"
+    "davidanson.vscode-markdownlint",
+    "eamodio.gitlens"
   ],
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
   "forwardPorts": [
