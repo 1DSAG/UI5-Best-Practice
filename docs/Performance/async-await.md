@@ -66,10 +66,14 @@ function readMyEntity({ payload, parameters = {} }) {
 ```js
 async function init() {
   try {
+    myElement.setBusy(true)
     const { data, response } = await readMyEntity({ id: 12345 })
     console.log(data, response)
   } catch (error) {
     console.error(error)
+  } finally {
+    // code placed here will run, even if you throw an error in catch
+    myElement.setBusy(false)
   }
 }
 ```
