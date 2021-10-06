@@ -19,3 +19,26 @@
 .remove-before *::before {
     content: none !important
 }
+
+.sampleAppButton {
+	background:linear-gradient(to bottom, #7253ed 5%, #7253ed 100%);
+	background-color:#7253ed;
+	border-radius:6px;
+	border:1px solid #7253ed;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	font-weight:bold;
+	padding:5px 29px;
+	text-decoration:none;
+}
+.sampleAppButton:hover {
+	background:linear-gradient(to bottom, #7253ed 5%, #7253ed 100%);
+	background-color:#7253ed;
+}
+.sampleAppButton:active {
+	position:relative;
+	top:1px;
+}
