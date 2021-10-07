@@ -114,3 +114,14 @@ You can use the RSS Feed for every Blog Tag to use in your favourite RSS-Reader 
 [Official DSAG GitHub Repository](https://github.com/1DSAG)
 
 [ABAP Open Source Projects](https://dotabap.org/)
+
+## Slack
+
+[abapGit](https://abapgit-slackinviter.herokuapp.com/)
+Not only discussions about abapGit.
+
+[SAP Mentors](https://sapmentors-slack-invite.cfapps.eu10.hana.ondemand.com/)
+Everything around SAP Development.
+
+[OpenUI5](https://ui5-slack-invite.cfapps.eu10.hana.ondemand.com/)
+All topics around the UI5 Framework.
