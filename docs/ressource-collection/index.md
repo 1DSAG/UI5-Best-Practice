@@ -22,7 +22,6 @@ Here are the most important SAP Documents related to UI5 and Fiori
   * [SAP](#sap)
     * [SAP Answers](#sap-answers)
     * [SAP Blogs](#sap-blogs)
-      * [Extra Tip:](#extra-tip)
   * [GitHub](#github)
   * [Slack](#slack)
 
