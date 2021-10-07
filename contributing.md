@@ -1,4 +1,4 @@
-## Table of contents
+# Table of contents
 
 * [Developing](#developing)
   * [How to git commit messages](#how-to-git-commit-messages)
@@ -6,6 +6,29 @@
   * [How to use Pull Requests in GitHub](#how-to-use-pull-requests-in-github)
   * [linting of markdown content](#linting-of-markdown-content)
 * [Licensing](#licensing)
+
+## Content
+
+### Add Images
+
+The individual topics are each in a subfolder.
+For pictures, create a separate subfolder with the name 'img', e.g. here:
+
+[https://github.com/1DSAG/UI5-Best-Practice/tree/main/docs/i18n](https://github.com/1DSAG/UI5-Best-Practice/tree/main/docs/i18n)
+
+To display the pictures with a subtitle and a alternative text, create a table in markdown like this:
+
+[Picture in Documentation](https://1dsag.github.io/UI5-Best-Practice/i18n/advancedFeatures.html#result)
+
+[Markdown in GitHub](https://github.com/1DSAG/UI5-Best-Practice/blob/main/docs/i18n/advancedFeatures.markdown)
+
+[Raw in GitHub](https://raw.githubusercontent.com/1DSAG/UI5-Best-Practice/main/docs/i18n/advancedFeatures.markdown)
+
+```text
+| ![Usage of Placeholder in i18n in XML Views](img/i18n_PlaceholderXMLViews.png) |
+| :--: |
+| *Usage of Placeholder in i18n in XML Views* |
+```
 
 ## Developing
 
