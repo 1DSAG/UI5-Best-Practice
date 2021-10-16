@@ -21,7 +21,7 @@
 #### Create new folder
 
 Create a new folder under "docs".
-Folder name should be lowerCamelCase.
+Folder name should be lower case and with multiple words seperated by hyphen.
 Create an "index.md". This is the overview page that gives an overview of the topic.
 If you want to use images, create an extra image folder named "img".
 All other pages that are subordinate to this topic should also be named lowerCamelCase.
