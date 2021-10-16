@@ -1,5 +1,12 @@
 # Table of contents
 
+* [Content](#content)
+  * [Create new Topic](#create-new-topic)
+  * [Create new Folder](#create-new-folder)
+  * [Metadata in pages](#metadata-in-pages)
+  * [Add Images](#add-images)
+  * [Create sample app](#create-sample-app)
+  * [Add Emojis](#add-emojis)
 * [Developing](#developing)
   * [How to git commit messages](#how-to-git-commit-messages)
 * [Contributing](#contributing)
@@ -89,6 +96,12 @@ You can see this example [here](https://raw.githubusercontent.com/1DSAG/UI5-Best
 
 To automatically display a button at the beginning of the page, for example, the metadata tag "sample_branch" can be used.
 Example [here](https://1dsag.github.io/UI5-Best-Practice/i18n/)
+
+### Add Emojis
+
+In this project we use the Jekyll plugin [jemoji](https://github.com/jekyll/jemoji).
+This allows the use of emojis.
+An overview of all emojis can be found [here](https://github.com/ikatyang/emoji-cheat-sheet).
 
 ## Developing
 
