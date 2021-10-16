@@ -76,6 +76,20 @@ To display the pictures with a subtitle and a alternative text, create a table i
 | *Usage of Placeholder in i18n in XML Views* |
 ```
 
+### Create sample app
+
+It is possible to create a sample app for the topics.
+There is a [seperate repository](https://github.com/1DSAG/UI5-Best-Practice-samples) for this. The individual topics have their own branches. If necessary, several branches can be created for one topic.
+To start, use with the boiler plate code in the main branch.
+To integrate the sample app, the easiest way is to simply link to the branch.
+
+The boiler plate code makes it easy to use codesandbox.io, so a user can not only execute directly, but also edit the code.
+If you want to include the example via iframe, be sure to link directly to the branch.
+You can see this example [here](https://raw.githubusercontent.com/1DSAG/UI5-Best-Practice/main/docs/i18n/advancedFeatures.markdown)
+
+To automatically display a button at the beginning of the page, for example, the metadata tag "sample_branch" can be used.
+Example [here](https://1dsag.github.io/UI5-Best-Practice/i18n/)
+
 ## Developing
 
 ### How to git commit messages
