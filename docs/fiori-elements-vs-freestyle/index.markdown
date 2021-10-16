@@ -2,11 +2,9 @@
 layout: default
 title: Fiori Elements vs. Freestyle
 name: Fiori Elements vs. Freestyle
-permalink: /fiori_elements_freestyle/
+permalink: /fiori-elements-freestyle/
 nav_order: 35
 ---
-
-<!-- markdownlint-disable MD025 -->
 
 # Fiori Elements vs. Freestyle
 
