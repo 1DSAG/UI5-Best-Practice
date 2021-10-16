@@ -2,11 +2,11 @@
 layout: default
 title: Testing
 permalink: /testing/
-has_children: false
+has_children: true
 nav_order: 80
 ---
 
-Automated Testing
+Testing
 =================
 
 Automated testing is an essential part of the development workflow to ensure the technical correctness of
