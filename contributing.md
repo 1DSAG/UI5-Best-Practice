@@ -9,6 +9,52 @@
 
 ## Content
 
+### Create new Topic
+
+#### Create new folder
+
+Create a new folder under "docs".
+Folder name should be lowerCamelCase.
+Create an "index.md". This is the overview page that gives an overview of the topic.
+If you want to use images, create an extra image folder named "img".
+All other pages that are subordinate to this topic should also be named lowerCamelCase.
+
+#### Metadata in pages
+
+There are various metadata with which various things are influenced.
+
+* default
+  * this is the default layout, please use only this
+* title
+  * this name will be visible in the sidebar
+* permalink (only index page)
+  * between two slashes, insert the name in lowerCamelCase here again
+* has_children
+  * If the index side has children, it must be true
+  * It´s also possible that children pages have children pages
+* nav_order
+  * index Page
+    * Look at the other pages and add here the corresponding number that fits here alphabetically.
+  * children pages
+    * Defines the order within the topic
+* sample_branch (optional)
+  * If an example app exists in the [sample repository](https://github.com/1DSAG/UI5-Best-Practice-samples), the branch name can be inserted here.
+  * can be used on all pages
+  * will create a button to the sample app in the other repository
+
+Example:
+
+```text
+---
+layout: default
+title: i18n
+permalink: /i18n/
+has_children: true
+nav_order: 40
+sample_branch: i18n
+---
+```
+
 ### Add Images
 
 The individual topics are each in a subfolder.
