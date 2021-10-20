@@ -24,7 +24,8 @@ But what exactly is Fiori and what is the difference between UI5 and Fiori Apps?
 
  A Fiori App is an App that is designed according to this Fiori design paradigm.
 
- UI5 is a software framework, which is used to develop Apps. This means that not every UI5 App is a Fiori App at same time. It is possible to build an UI5 App, which violates the Fiori Design Principles. UI5 is usually needed to create a Fiori App, because it includes many elements, which are the technical building blocks of the Fiori design principles.
+ UI5 is a software framework, which is used to develop Apps. This means that not every UI5 App is an Fiori App at the same time. It is possible to build a UI5 App that doesn't strictly follow the Fiori Design Principles, but still uses UI5 "controls" (UI building blocks) that are styled in a Fiori-like design. UI5 is usually needed to create a Fiori App, because it includes many elements, which are the technical building blocks of the Fiori design principles.
+These building blocks can also be used in other frameworks with the [UI5 Web Components](https://sap.github.io/ui5-webcomponents/).
 
  Besides dedicated development in UI5, SAP offers another framework to develop Apps according to the Fiori Design Guidelines which is called Fiori Elements. It makes heavy use of annotations and metadata to generate the UI instead of the more development-focused approach of UI5.
 
