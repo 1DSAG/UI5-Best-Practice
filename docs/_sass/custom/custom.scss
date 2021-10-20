@@ -33,6 +33,12 @@
 	font-weight:bold;
 	padding:5px 29px;
 	text-decoration:none;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.sampleAppButtonContainer {
+    position: fixed;
+    top: 5rem;
+    right: 5rem;
 }
 .sampleAppButton:hover {
 	background:linear-gradient(to bottom, #7253ed 5%, #7253ed 100%);

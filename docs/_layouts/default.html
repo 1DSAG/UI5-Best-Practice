@@ -132,7 +132,9 @@ layout: table_wrappers
       {% endunless %}
       <div id="main-content" class="main-content" role="main">
         {% if page.sample_branch %}
+        <div class="sampleAppButtonContainer">
             <a href="https://github.com/1DSAG/UI5-Best-Practice-samples/tree/{{ page.sample_branch }}" target="_blank" class="sampleAppButton">Sample App for '{{ page.sample_branch }}'</a>
+        </div>
         {% endif %}
 
         {% if site.heading_anchors != false %}
