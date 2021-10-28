@@ -4,9 +4,10 @@ title: i18n
 permalink: /i18n/
 has_children: true
 nav_order: 40
+sample_branch: i18n
 ---
 
-## Overview i18n Overview
+# Overview i18n Overview
 
 Many companies use SAP systems and applications and many different countries.
 To ensure easy translation, the "i18n" (Internationalization) process is used.
@@ -79,4 +80,3 @@ Annotations in the i18n files are helpful to understand how the i18n texts are u
 | *i18n example with annotations* |
 
 A list of the possible text classification can be found here: [Annotations in Translation Files](https://openui5.hana.ondemand.com/topic/831039835e7c4da3a8a0b49567573afe)
-
