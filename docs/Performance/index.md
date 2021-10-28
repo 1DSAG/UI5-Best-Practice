@@ -3,7 +3,7 @@ layout: default
 title: Performance
 permalink: /performance/
 has_children: true
-nav_order: 6
+nav_order: 75
 ---
 
 ## Performance
