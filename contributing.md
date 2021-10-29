@@ -20,10 +20,10 @@
 
 #### Create new folder
 
-Create a new folder under "docs".
-Folder name should be lower case and with multiple words seperated by hyphen.
-Create an "index.md". This is the overview page that gives an overview of the topic.
-If you want to use images, create an extra image folder named "img".
+Create a new folder under `docs`.
+Folder names should be lower case and seperated by hyphen (`-`, e.g. `my-new-folder`).
+Create an `index.md`. This is the overview page that gives an overview of the topic.
+If you want to use images, create an extra image folder named `img`.
 All other pages that are subordinate to this topic should also be named lowerCamelCase.
 
 #### Metadata in pages
@@ -35,7 +35,7 @@ There are various metadata with which various things are influenced.
 * title
   * this name will be visible in the sidebar
 * permalink (only index page)
-  * between two slashes, insert the name in lowerCamelCase here again
+  * between two slashes, insert the name in ´lowerCamelCase´ here again
 * has_children
   * If the index side has children, it must be true
   * It´s also possible that children pages have children pages
@@ -65,11 +65,11 @@ sample_branch: i18n
 ### Add Images
 
 The individual topics are each in a subfolder.
-For pictures, create a separate subfolder with the name 'img', e.g. here:
+For pictures, create a separate subfolder with the name `img`, e.g. here:
 
 [https://github.com/1DSAG/UI5-Best-Practice/tree/main/docs/i18n](https://github.com/1DSAG/UI5-Best-Practice/tree/main/docs/i18n)
 
-To display the pictures with a subtitle and a alternative text, create a table in markdown like this:
+To display the pictures with a subtitle and an alternative text, create a table in markdown like this:
 
 [Picture in Documentation](https://1dsag.github.io/UI5-Best-Practice/i18n/advancedFeatures.html#result)
 
@@ -87,15 +87,15 @@ To display the pictures with a subtitle and a alternative text, create a table i
 
 It is possible to create a sample app for the topics.
 There is a [seperate repository](https://github.com/1DSAG/UI5-Best-Practice-samples) for this. The individual topics have their own branches. If necessary, several branches can be created for one topic.
-To start, use with the boiler plate code in the main branch.
+To start, use the boiler plate code in the main branch.
 To integrate the sample app, the easiest way is to simply link to the branch.
 
 The boiler plate code makes it easy to use codesandbox.io, so a user can not only execute directly, but also edit the code.
 If you want to include the example via iframe, be sure to link directly to the branch.
-You can see this example [here](https://raw.githubusercontent.com/1DSAG/UI5-Best-Practice/main/docs/i18n/advancedFeatures.markdown)
+You can see this example [here](https://raw.githubusercontent.com/1DSAG/UI5-Best-Practice/main/docs/i18n/advancedFeatures.markdown) .
 
-To automatically display a button at the beginning of the page, for example, the metadata tag "sample_branch" can be used.
-Example [here](https://1dsag.github.io/UI5-Best-Practice/i18n/)
+To automatically display a button at the beginning of the page, for example, the metadata tag ´sample_branch´ can be used.
+Example [here](https://1dsag.github.io/UI5-Best-Practice/i18n/) .
 
 ### Add Emojis
 
