@@ -92,7 +92,15 @@ To integrate the sample app, the easiest way is to simply link to the branch.
 
 The boiler plate code makes it easy to use codesandbox.io, so a user can not only execute directly, but also edit the code.
 If you want to include the example via iframe, be sure to link directly to the branch.
-You can see this example [here](https://raw.githubusercontent.com/1DSAG/UI5-Best-Practice/main/docs/i18n/advancedFeatures.markdown) .
+You can see this example for the sample branch `i18n`:
+```js
+<iframe src="https://codesandbox.io/embed/github/1DSAG/UI5-Best-Practice-samples/tree/i18n/?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fview%2FMainView.view.xml&theme=dark&view=editor"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="ui5-sandbox"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts">
+</iframe>
+```
 
 To automatically display a button at the beginning of the page, for example, the metadata tag ´sample_branch´ can be used.
 Example [here](https://1dsag.github.io/UI5-Best-Practice/i18n/) .
