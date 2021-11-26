@@ -4,6 +4,7 @@ title: Testing
 permalink: /testing/
 has_children: false
 nav_order: 80
+sample_branch: testing
 ---
 
 Automated Testing
