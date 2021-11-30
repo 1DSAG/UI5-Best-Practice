@@ -30,22 +30,17 @@ All other pages that are subordinate to this topic should also be named lowerCam
 
 There are various metadata with which various things are influenced.
 
-* default
-  * this is the default layout, please use only this
-* title
-  * this name will be visible in the sidebar
-* permalink (only index page)
-  * between two slashes, insert the name in ´lowerCamelCase´ here again
-* has_children
-  * If the index side has children, it must be true
-  * It´s also possible that children pages have children pages
-* nav_order
-  * index Page
-    * Look at the other pages and add here the corresponding number that fits here alphabetically.
-  * children pages
-    * Defines the order within the topic
-* sample_branch (optional)
-  * If an example app exists in the [sample repository](https://github.com/1DSAG/UI5-Best-Practice-samples), the branch name can be inserted here.
+* `default`: this is the default layout, please use only this
+* `title`: this name will be visible in the sidebar
+* `permalink` (only index page): between two slashes, insert the name in ´lowerCamelCase´ here again
+* `has_children`
+  * If the index page has children, it must be `true`
+  * It´s also possible that child pages have child pages themselves
+* `nav_order`
+  * if page is an index page: Look at the other pages and add the corresponding number that fits here "alphabetically"
+  * if page is a child page: Defines the order within the topic
+* `sample_branch` (optional)
+  * If an example app exists in the [sample repository](https://github.com/1DSAG/UI5-Best-Practice-samples), the branch name can be inserted here
   * can be used on all pages
   * will create a button to the sample app in the other repository
 
