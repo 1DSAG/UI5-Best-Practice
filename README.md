@@ -205,4 +205,4 @@ For convenience, because small markdown formatting mistakes are automatically fi
 
 ## Licensing
 
-This project uses the MIT license : [LICENSE](LICENSE)
+This project uses the CC BY 4.0 license : [LICENSE](LICENSE)
