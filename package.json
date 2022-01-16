@@ -37,5 +37,9 @@
   },
   "lint-staged": {
     "*.md": "markdownlint -c .markdownlint.jsonc --fix"
+  },
+  "devDependencies": {
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.4"
   }
 }
