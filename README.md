@@ -14,18 +14,17 @@ The document is written in (kramdown flavored) `markdown` and served via `jekyll
 
 ## Table of contents
 * [Table of contents](#table-of-contents)
-* [Getting started Options](#getting-started)
-  * [Recommended: Development Container](#recommended-development-container)
-    * [Installation Steps](#installation-steps)
-  * [Alternative:  Local installation](#alternative--local-installation)
-    * [Prerequisites for Windows](#prerequisites-for-windows)
-    * [Installation Steps](#installation-steps)
+* [Getting started Options](#getting-started-options)
+  * [Quick Start with GitHub web-based editor](#quick-start-with-github-web-based-editor)
+  * [Development Docker Container](#development-docker-container)
+  * [Local installation](#local-installation)
 * [Contributing](#contributing)
 * [Licensing](#licensing)
 
 ## Getting started Options
 
 ### **Quick Start with GitHub web-based editor**
+----
 
 The [web-based editor is as IDE](https://docs.github.com/en/codespaces/the-githubdev-web-based-editor) that runs entirely in your browser. With the web-based editor, you can navigate files and source code repositories from GitHub, and make and commit code changes. You can open any repository, fork, or pull request in the editor.  
 Also you can preview markdown files while you edit.  
@@ -66,6 +65,7 @@ From then on, the page is rebuilt with every commit.
 ![fork a github project](img/100-04-publish-page.png)
 
 ### **Development Docker Container**
+----
 
 This is the easiest way to have your development environment ready in no time.
 You get a ready to use configured Debian Container which is transparently used by Visual Studio Code.
@@ -97,6 +97,7 @@ bundle exec jekyll serve --livereload
 ```
 
 ### **Local installation**
+----
 
 #### Prerequisites for Windows
 
