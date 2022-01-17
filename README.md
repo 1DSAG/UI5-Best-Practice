@@ -13,33 +13,64 @@ Because **the DSAG UI5 best practice guide is a living document** 👨‍💻 - 
 The document is written in (kramdown flavored) `markdown` and served via `jekyll` in `github pages` (<https://1dsag.github.io/UI5-Best-Practice/>).
 
 ## Table of contents
-<!--ts-->
 * [Table of contents](#table-of-contents)
-* [Local Setup / Gettings started](#local-setup--gettings-started)
+* [Getting started Options](#getting-started)
   * [Recommended: Development Container](#recommended-development-container)
-    * [Getting Started](#getting-started)
+    * [Installation Steps](#installation-steps)
   * [Alternative:  Local installation](#alternative--local-installation)
     * [Prerequisites for Windows](#prerequisites-for-windows)
     * [Installation Steps](#installation-steps)
-* [Developing](#developing)
-  * [How to git commit messages](#how-to-git-commit-messages)
 * [Contributing](#contributing)
-  * [How to use Pull Requests in GitHub](#how-to-use-pull-requests-in-github)
-  * [linting of markdown content](#linting-of-markdown-content)
 * [Licensing](#licensing)
 
-<!-- Added by: node, at: Sat 14 Aug 2021 10:56:14 AM UTC -->
+## Getting started Options
 
-<!--te-->
+### **Quick Start with GitHub web-based editor**
 
-## Local Setup / Gettings started
+The [web-based editor is as IDE](https://docs.github.com/en/codespaces/the-githubdev-web-based-editor) that runs entirely in your browser. With the web-based editor, you can navigate files and source code repositories from GitHub, and make and commit code changes. You can open any repository, fork, or pull request in the editor.  
+Also you can preview markdown files while you edit.  
+This makes it very easy to get started since no local installation is required.  
+You can't see the final result right away, but GitHub can generate that as well for you.  
 
-### Recommended: Development Container
+1. Fork Repo
+
+![fork a github project](img/100-00-fork.png)
+
+2. Go to your created Fork Page
+
+![fork a github project](img/100-01-forked-page.png)
+
+3.  Press just `.` on your keyboard to switch to the IDE
+
+4. Create new Branch
+
+![fork a github project](img/100-02-create-branch.png)
+
+5. Define Branch Name
+
+![fork a github project](img/100-03-branch-name.png)
+
+6. Start writing
+
+Under `/docs` is the documentation. Just start editing or create a new folder for a new topic
+
+7. Preview Site
+
+You can preview the site also within GitHub.  
+Just go to Settings in your repository and there to Pages.  
+The link would be https://github.com/YOURUSERNAME/UI5-Best-Practice/settings/pages  
+Choose here your branch you´re working on and choose the `docs` folder.  
+After you have saved, it takes a few minutes until the page is accessible under the given URL.
+From then on, the page is rebuilt with every commit.
+
+![fork a github project](img/100-04-publish-page.png)
+
+### **Development Docker Container**
 
 This is the easiest way to have your development environment ready in no time.
 You get a ready to use configured Debian Container which is transparently used by Visual Studio Code.
 
-#### Getting Started
+#### Installation Steps
 
 Install the following programs:
 
@@ -65,7 +96,7 @@ cd docs
 bundle exec jekyll serve --livereload
 ```
 
-### Alternative:  Local installation
+### **Local installation**
 
 #### Prerequisites for Windows
 
@@ -102,106 +133,9 @@ bundle exec jekyll serve --livereload
 
 * point your web browser to <http://localhost:4000>
 
-## Developing
-
-### How to git commit messages
-
-commit messages are linted in order to allow for automatic later processing into `CHANGELOG` et al documents.  
-The linting occurs against the standards defined in the ["conventional commit" guidelines](https://github.com/conventional-changelog/commitlint/tree/master/%40commitlint/config-conventional), based on [the Angular project ones](https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines).
-
-The structure of a "conventional commit" message looks like:
-
-```text
-<type>[optional scope]: <description>
-
-[optional body]
-
-[optional footer(s)]
-```
-
-`<type>` can be any of
-
-* build
-* ci
-* chore
-* docs
-* feat
-* fix
-* perf
-* refactor
-* revert
-* style
-* test
-
-So a minimal commit message could look like...
-
-`feat: added basic testing chapter`
-
-…while a maxed out one might look like:
-
-```text
-fix: correct minor typos in code
-
-see the issue for details on typos fixed.
-additionally, replaced the dreaded ortho-""
-with straight/standard ones.
-
-Reviewed-by: Z
-Closes #133
-```
-
-Please refer to the [conventional commits website](https://www.conventionalcommits.org) for more details on all the possibilities of formatting a git commit message.
-
 ## Contributing
 
-### How to use Pull Requests in GitHub
-
-0. fork the repo  
-   ![fork a github project](img/00-fork.png)
-
-1. clone your fork into your local development environment  
-   ![clone the forked project](img/05-clone-fork.png)
-
-2. create a new local git branch  
-   ![create new local git branch](img/10-new-branch.png)
-
-3. write, edit, code (most likely `markdown` content in `/docs/**/*`.  
-   👨‍💻  
-   repeat.
-
-   > note: we're using [`github flavoured markdown` (gfm)](https://github.github.com/gfm/) that allows for extended markdown formatting
-
-   `git commit` early, `git commit` often  
-   &rarr; watch out for the commit linting (see [git commit messages](#git-commit-messages))  
-   &rarr; enjoy the convenience of auto-markdown-linting (see [linting of markdown content](#linting-of-markdown-content))
-
-4. if applicable, [clean up your git commit history](https://about.gitlab.com/blog/2018/06/07/keeping-git-commit-history-clean/#situation-3-i-need-to-add-remove-or-combine-commits)
-
-5. push the local branch to your fork
-
-6. submit a pull request (PR)  
-   ![create a pull request on github](img/30-create-PR.png)
-
-7. write the PR message similar to the [git commit messages](#git-commit-messages), so `squash`-merging gets easy for the maintainers  
-   ![nice pull request message](img/31-PR-message.png)
-   if applicable, referenc open issues in your commit message (<https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword>)
-
-8. add a reviewer to the PR  
-   ![add a reviewer to the pull request](img/35-PR-reviewer.png)
-
-9. Changes necessary after the PR was created?  
-   Simply commit to the branch of your fork  
-   &rarr; the PR gets updated automatically  
-   &rarr; move the PR into `draft` mode until ready (then move to `ready for review`)
-
-10. PR review process successfully completed?  
-    Then the PR will be merged by any of the maintainers and it’s time for 🎉
-
-### linting of markdown content
-
-Any markdown content (in `/docs/**/*`) is linted via [`markdownlint`](https://github.com/DavidAnson/markdownlint) both for quality assurance and convenience.  
-For quality assurance, to have the markdown-files max standard compliant, so subsequent processing and exporting is possible without running into formatting issues.  
-For convenience, because small markdown formatting mistakes are automatically fixed via the `markdownlint` upon commit - the `markdownlint` [`cli`](https://github.com/igorshubovych/markdownlint-cli) injects those fixes prior to the git commit, so don’t be surprised 😉
+For all information on the development process and best practices for creating content, visit [Contributing](contributing.md).
 
 ## Licensing
 
