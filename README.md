@@ -13,7 +13,6 @@ Because **the DSAG UI5 best practice guide is a living document** 👨‍💻 - 
 The document is written in (kramdown flavored) `markdown` and served via `jekyll` in `github pages` (<https://1dsag.github.io/UI5-Best-Practice/>).
 
 ## Table of contents
-* [Table of contents](#table-of-contents)
 * [Getting started Options](#getting-started-options)
   * [Quick Start with GitHub web-based editor](#quick-start-with-github-web-based-editor)
   * [Development Docker Container](#development-docker-container)
