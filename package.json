@@ -4,7 +4,9 @@
   "description": "part of the environment setup for the DSAG UI5 best practice guide",
   "main": "--none",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "create-pdf": "ts-node ./ts/to_pdf.ts",
+    "markdown-lint": "markdownlint -c .markdownlint.jsonc  ./docs",
+    "general-lint" : "ts-node ./ts/lint.ts"
   },
   "repository": {
     "type": "git",
