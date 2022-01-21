@@ -12,7 +12,7 @@ The following points should be observed with regard to error handling:
 
 ## Use a separate ErrorHandler.js file for error output
 
-A separate ErrorHandler.js file should at least display all error messages of the integrated OData service. 
+A separate ErrorHandler.js file should at least display all error messages of the integrated OData service.
 The event "error", what is thrown by manual constructed oData queries, should only be used for a further processing of the error, not for displaying the error.
 
 Example: Don't do this:
@@ -21,7 +21,7 @@ Example: Don't do this:
 this.getModel().read("/Entity('key'", {
     error: function () {
         sap.m.MessageBox.error("Error!", {
-            styleClass: this.getOwnerComponent().getContentDensityClass() 	
+            styleClass: this.getOwnerComponent().getContentDensityClass()  
         });
         this.getView().setBusy(false);
     }
@@ -44,7 +44,7 @@ this.getModel().read("/Entity('key')", {
 });
 ```
 
-A sample for a separate error handler file can be found in the section [Sample Error Handler](sampleerrorhandler.markdown). 
+A sample for a separate error handler file can be found in the section [Sample Error Handler](sampleerrorhandler.markdown).
 
 ## Consider the SAP Fiori Guidelines
 
@@ -66,7 +66,7 @@ Subject-specific verifications, on the other hand, should take place in the back
 
 ## Also display several error messages at once
 
-An OData service can send a response with several error messages as a result of a request. It is also possible that several requests are made in parallel and that error messages from two different requests are sent to the frontend app. Likewise, it is also possible that an error message is displayed originating from the controller and at that moment an error message from the backend reaches the frontend app. To summarise briefly: It is possible that several relevant messages exist at the same time. 
+An OData service can send a response with several error messages as a result of a request. It is also possible that several requests are made in parallel and that error messages from two different requests are sent to the frontend app. Likewise, it is also possible that an error message is displayed originating from the controller and at that moment an error message from the backend reaches the frontend app. To summarise briefly: It is possible that several relevant messages exist at the same time.
 
 In the literature or in instructions on the internet, similar variants like the following for the output of service errors can be found (don't use that):
 
@@ -86,12 +86,11 @@ _showServiceError: function(sDetails) {
 }
 ```
 
-
 If you need to display multiple messages, use a [Message View](https://experience.sap.com/fiori-design-web/message-view/).
 
 Message boxes and message views can be a stumbling block when it comes to setting the correct content density class. When calling a message box, the content density class must always be transferred. If this does not happen, the controls in the view and in the message box may be in different style classes, which does not look very professional.
 
-## Send application-related messages from the frontend and technical or business messages from the backend
+## Send application related messages from the frontend and technical or business messages from the backend
 
 It should be noted that verifications should be made at the right place and thus error messages should be thrown at the appropriate place.
 
@@ -99,9 +98,9 @@ Error messages from the SAPUI5 application should only concern the application l
 
 Subject-specific verifications, on the other hand, should take place in the backend and subject-specific error messages should be issued accordingly via the OData service. Example for a message from the backend: When data is entered via a form, a check is made to see whether the postcode entered exists. If the postcode does not exist, an error message will be thrown by the service.
 
-## Also display several error messages at once
+## display several error messages at once
 
-An OData service can send a response with several error messages as a result of a request. It is also possible that several requests are made in parallel and that error messages from two different requests are sent to the frontend app. Last but not least, it is also possible that an error message is displayed from the controller and at that moment an error message from the backend reaches the frontend app. To summarise briefly: It is possible that several relevant messages exist at the same time. 
+An OData service can send a response with several error messages as a result of a request. It is also possible that several requests are made in parallel and that error messages from two different requests are sent to the frontend app. Last but not least, it is also possible that an error message is displayed from the controller and at that moment an error message from the backend reaches the frontend app. To summarise briefly: It is possible that several relevant messages exist at the same time.
 
 In the literature or in instructions on the internet, the following variant for the output of service errors is often found (don't use that):
 
@@ -121,8 +120,6 @@ _showServiceError: function(sDetails) {
 }
 ```
 
-
-This form of error output ensures that only one error is displayed and all other errors are ignored. Instead, in the case of multiple errors, you should use a message view instead of the message box. 
+This form of error output ensures that only one error is displayed and all other errors are ignored. Instead, in the case of multiple errors, you should use a message view instead of the message box.
 
 An example for a smarter implementation can be found in the [Sample Error Handler](sampleerrorhandler.markdown).
-
