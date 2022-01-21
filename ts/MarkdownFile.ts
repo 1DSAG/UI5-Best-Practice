@@ -67,16 +67,27 @@ export class MarkdownFile {
     const frontMatterArrayCleaned = frontMatterArray.filter(
       (line) => line !== ""
     );
-    // remove lines starting with #
+    // remove lines smaller then 3 chars
     const frontMatterArrayCleaned2 = frontMatterArrayCleaned.filter(
+      (line) => line !== '\r'
+    );
+    // remove lines starting with #
+    const frontMatterArrayCleaned3 = frontMatterArrayCleaned2.filter(
       (line) => !line.startsWith("#")
     );
+    console.log(frontMatterArrayCleaned3)
     // parse array from strings split by to dict:
-    const frontMatterDict = frontMatterArrayCleaned2.reduce((acc, curr) => {
-      const [key, value] = curr.split(":");
-      acc[key.trim()] = value.trim();
+    const frontMatterDict = frontMatterArrayCleaned3.reduce((acc, curr) => {
+      try {
+        const [key, value] = curr.split(":");
+        acc[key.trim()] = value.trim();
+      } catch (error) {
+        console.log(`ERROR on filepath: ${filePath}`);
+      }
+
       return acc;
     }, {} as { [id: string]: string });
+    console.log(frontMatterDict)
     return frontMatterDict;
   }
 
