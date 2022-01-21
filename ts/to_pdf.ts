@@ -43,7 +43,7 @@ class PDF {
   async createMainDictionary() {
     // create main dictionary
     this._mainDictionary["./docs/index.md"] = new MarkdownFile(
-      "./docs/index.markdown",
+      "./docs/index.md",
       "./tmp/"
     );
     fs.readdirSync('./').forEach(file => {
