@@ -29,23 +29,23 @@ For application-related messages from the controller, the methods displayError, 
     /**
     * DSAG Sample Error Handler
     * --------------------------------------------------------------------------------------------------------
-    * This error handler was developed as part of the DSAG SAPUI5 Best Practice Guide. It can be used as a basic error handler and optionally supplemented with further features. 
-    * For example, we have an extended version in use at REWE Group, 
-    * which, in addition to the parsing capabilities of the OData message parser provided by the SAPUI5 framework, parses additional error messages in XML format and 
+    * This error handler was developed as part of the DSAG SAPUI5 Best Practice Guide. It can be used as a basic error handler and optionally supplemented with further features.
+    * For example, we have an extended version in use at REWE Group,
+    * which, in addition to the parsing capabilities of the OData message parser provided by the SAPUI5 framework, parses additional error messages in XML format and
     * as well as replace or ignore certain error messages.<br>
-    * If this error handler is created when the component is initialised, 
-    * it outputs all messages received via the Message Manager from the OData Service in the control that is intended by the SAP Fiori Guidelines. 
-    * Thus, error messages are output in a message box and success messages via a message toast. 
+    * If this error handler is created when the component is initialised,
+    * it outputs all messages received via the Message Manager from the OData Service in the control that is intended by the SAP Fiori Guidelines.
+    * Thus, error messages are output in a message box and success messages via a message toast.
     * If several messages are sent, a message view with all messages is displayed instead of the message box or message toast.<br>
-    * Using the method {@link module:controller/ErrorHandler#addModelToHandle} it is possible 
+    * Using the method {@link module:controller/ErrorHandler#addModelToHandle} it is possible
     * to activate the error handling for further models in addition to the default model.<br>
-    * The error handler recognises independently whether it is an OData V2 or V4 model, 
+    * The error handler recognises independently whether it is an OData V2 or V4 model,
     * and processes the messages received by the SAPUI5 Message Handler for both OData Model types.<br>
-    * In addition, the methods {@link module:controller/ErrorHandler#displayError}, {@link module:controller/ErrorHandler#displayWarning}, 
-    * {@link module:controller/ErrorHandler#displayInformation} and {@link module:controller/ErrorHandler#displaySuccess} 
+    * In addition, the methods {@link module:controller/ErrorHandler#displayError}, {@link module:controller/ErrorHandler#displayWarning},
+    * {@link module:controller/ErrorHandler#displayInformation} and {@link module:controller/ErrorHandler#displaySuccess}
     * can be used to display messages from the application code. These are also output in the correct control and, in the case of multiple messages, in a message view.<br>
-    * A prerequisite for the correct functioning of the error handler is that the getContentDensityClass method is defined in the Component.js (see the corresponding 
-    * <a href="https://experience.sap.com/fiori-design-web/cozy-compact/">SAP Fiori Guidelines article</a>. 
+    * A prerequisite for the correct functioning of the error handler is that the getContentDensityClass method is defined in the Component.js (see the corresponding
+    * <a href="https://experience.sap.com/fiori-design-web/cozy-compact/">SAP Fiori Guidelines article</a>.
     * and the Developer Guide to Content Density linked therein).
     * @module controller/ErrorHandler
     * @author Tobias Kessel <tobias.kessel@rewe-group.com>
@@ -515,21 +515,21 @@ For application-related messages from the controller, the methods displayError, 
     <br>
     </details>
 
-<br>
+    <br>
 
-3. In UI5Object.extend line (line 32), adjust the namespace and the component name of your SAPUI5 app.<br>
+ 3. In UI5Object.extend line (line 32), adjust the namespace and the component name of your SAPUI5 app.<br>
    <img src="img/NamespaceComponent.gif"/><br><br>
-4. Include the error handler file in Component.js by declaring it as a required resource in the document header.<br>
+ 4. Include the error handler file in Component.js by declaring it as a required resource in the document header.<br>
    <img src="img/Announce.gif"/><br><br>
-5. Initialise the error handler in the onInit method of Component.js by inserting the following code line:
+ 5. Initialise the error handler in the onInit method of Component.js by inserting the following code line:
 
-   ```js
-    this._oErrorHandler = new ErrorHandler(this);
-   ```
+        ```js
+        this._oErrorHandler = new ErrorHandler(this);
+        ```
 
    <br>
    <img src="img/Initialise.gif"/><br><br>
-6. Make sure that the Component.js contains the method getContentDensityClass for the style class setting.
+ 6. Make sure that the Component.js contains the method getContentDensityClass for the style class setting.
     <details>
     <summary>If missing, copy and paste it from here.</summary>
     <br>
@@ -557,13 +557,13 @@ If an OData V2 or OData V4 model is defined as the default model, the error hand
 To activate error handling for a model that is not defined as the default model, the method addModelToHandle must be called transferring the corresponding model.<br>
 Example:
 
-```js
-var oSecondModel = this.getModel("secondModel");
-if (oSecondModel) {
-    // Activate message handling for second model:
-    this.getOwnerComponent()._oErrorHandler.addModelToHandle(oSecondModel);
-}
-```
+    ```js
+    var oSecondModel = this.getModel("secondModel");
+    if (oSecondModel) {
+        // Activate message handling for second model:
+        this.getOwnerComponent()._oErrorHandler.addModelToHandle(oSecondModel);
+    }
+    ```
 
 ## Output of messages from application controller
 
@@ -571,11 +571,11 @@ When using this error handler, it is recommended to output all messages from an 
 
 Example for displaying an error message:
 
-```js
-// Read error message from i18n file:
-var sErrorMessage = this.readI18nText("errorMessage");
-// Get error handler from component property:
-var oErrorHandler = this.getOwnerComponent()._oErrorHandler;
-// Display error message using error handler:
-oErrorHandler.displayError(sErrorMessage);  
-```
+    ```js
+    // Read error message from i18n file:
+    var sErrorMessage = this.readI18nText("errorMessage");
+    // Get error handler from component property:
+    var oErrorHandler = this.getOwnerComponent()._oErrorHandler;
+    // Display error message using error handler:
+    oErrorHandler.displayError(sErrorMessage);  
+    ```

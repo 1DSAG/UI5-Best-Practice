@@ -13,8 +13,8 @@ In general, the handling of translated texts is very well documented in the SAP 
 
 ## Setup
 
- 1. create a new folder with the name "i18n 
- 2. create at least one file with the name "i18n.properties 
+ 1. create a new folder with the name "i18n
+ 2. create at least one file with the name "i18n.properties
 
     The folder should be created in the "webapp" folder
 
@@ -38,7 +38,6 @@ In general, the handling of translated texts is very well documented in the SAP 
     | :--:  |
     | *Folder Structure and Init File for i18n* |
 
-
 ## Usage in XML Views
 
 Since we have defined a model in manifest.json, we access the individual keys in the XML view as with any other model.
@@ -58,7 +57,7 @@ We take as an example the already previously defined translations
 
 ## Usage in Controllers
 
-It is good practice to create a BaseController that has several methods already implemented. 
+It is good practice to create a BaseController that has several methods already implemented.
 One of them is to access the i18n model directly in the controllers:
 
 ```javascript
@@ -73,7 +72,7 @@ getResourceBundle : function () {
 ```
 
 Now it is possible to access the texts in the inherited controllers as follows:
- 
+
 ```javascript
 var sTitleText = this.getResourceBundle().getText("title");
 ```
@@ -89,20 +88,20 @@ Numbers, starting with 0, are placed in curly brackets. In case of multiple vari
 | :--: |
 | *Usage of Placeholder in i18n* |
 
-
 <div class="goodExample"  markdown=1>
 
-### Good example:
+### Good example
 
 ```javascript
     var sTranslatedText = this.getResourceBundle().getText("worklistTitle", [iCounterVariable]);
 ```
+
 <br/>
 </div>
 
 <div class="badExample"  markdown=1>
 
-### Bad example:
+### Bad example
 
 ```javascript
     var sTranslatedText = this.getResourceBundle().getText("worklistTitlePart1")
@@ -110,6 +109,7 @@ Numbers, starting with 0, are placed in curly brackets. In case of multiple vari
                             +  iCounterVariable 
                             + this.getResourceBundle().getText("worklistTitlePart2");
 ```
+
 <br/>
 </div>
 
