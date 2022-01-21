@@ -29,7 +29,9 @@
     "@commitlint/config-conventional": "^11.0.0",
     "husky": "^4.3.7",
     "lint-staged": "^10.5.3",
-    "markdownlint-cli": "^0.26.0"
+    "markdownlint-cli": "^0.26.0",
+    "md-to-pdf": "^5.0.1",
+    "pdf-lib": "^1.17.1"
   },
   "husky": {
     "hooks": {
@@ -42,6 +44,6 @@
   },
   "devDependencies": {
     "ts-node": "^10.4.0",
-    "typescript": "^4.5.4"
+    "typescript": "^4.5.5"
   }
 }
