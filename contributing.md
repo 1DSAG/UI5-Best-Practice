@@ -1,20 +1,21 @@
 # Table of contents
 
-* [Content](#content)
-  * [Create new Topic](#create-new-topic)
-  * [Create new Folder](#create-new-folder)
-  * [Metadata in pages](#metadata-in-pages)
-  * [Add Images](#add-images)
-  * [Create sample app](#create-sample-app)
-  * [Add Emojis](#add-emojis)
-* [Developing](#developing)
-  * [How to git commit messages](#how-to-git-commit-messages)
-* [Contributing](#contributing)
-  * [How to use Pull Requests in GitHub](#how-to-use-pull-requests-in-github)
-  * [linting of markdown content](#linting-of-markdown-content)
-* [Licensing](#licensing)
+- [Table of contents](#table-of-contents)
+  - [Create Content](#create-content)
+    - [Create new Topic](#create-new-topic)
+      - [Create new folder](#create-new-folder)
+      - [Metadata in pages](#metadata-in-pages)
+    - [Add Images](#add-images)
+    - [Create sample app](#create-sample-app)
+    - [Add Emojis](#add-emojis)
+  - [Developing](#developing)
+    - [How to git commit messages](#how-to-git-commit-messages)
+  - [Contributing](#contributing)
+    - [How to use Pull Requests in GitHub](#how-to-use-pull-requests-in-github)
+    - [Markdown Linting](#markdown-linting)
+    - [General Linting](#general-linting)
 
-## Content
+## Create Content
 
 ### Create new Topic
 
@@ -30,19 +31,19 @@ All other pages that are subordinate to this topic should also be named lowerCam
 
 There are various metadata with which various things are influenced.
 
-* `default`: this is the default layout, please use only this
-* `title`: this name will be visible in the sidebar
-* `permalink` (only index page): between two slashes, insert the name in ´lowerCamelCase´ here again
-* `has_children`
-  * If the index page has children, it must be `true`
-  * It´s also possible that child pages have child pages themselves
-* `nav_order`
-  * if page is an index page: Look at the other pages and add the corresponding number that fits here "alphabetically"
-  * if page is a child page: Defines the order within the topic
-* `sample_branch` (optional)
-  * If an example app exists in the [sample repository](https://github.com/1DSAG/UI5-Best-Practice-samples), the branch name can be inserted here
-  * can be used on all pages
-  * will create a button to the sample app in the other repository
+- `default`: this is the default layout, please use only this
+- `title`: this name will be visible in the sidebar
+- `permalink` (only index page): between two slashes, insert the name in ´lowerCamelCase´ here again
+- `has_children`
+  - If the index page has children, it must be `true`
+  - It´s also possible that child pages have child pages themselves
+- `nav_order`
+  - if page is an index page: Look at the other pages and add the corresponding number that fits here "alphabetically"
+  - if page is a child page: Defines the order within the topic
+- `sample_branch` (optional)
+  - If an example app exists in the [sample repository](https://github.com/1DSAG/UI5-Best-Practice-samples), the branch name can be inserted here
+  - can be used on all pages
+  - will create a button to the sample app in the other repository
 
 Example:
 
@@ -88,6 +89,7 @@ To integrate the sample app, the easiest way is to simply link to the branch.
 The boiler plate code makes it easy to use codesandbox.io, so a user can not only execute directly, but also edit the code.
 If you want to include the example via iframe, be sure to link directly to the branch.
 You can see this example for the sample branch `i18n`:
+
 ```js
 <iframe src="https://codesandbox.io/embed/github/1DSAG/UI5-Best-Practice-samples/tree/i18n/?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fview%2FMainView.view.xml&theme=dark&view=editor"
      style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
@@ -125,17 +127,17 @@ The structure of a "conventional commit" message looks like:
 
 `<type>` can be any of
 
-* build
-* ci
-* chore
-* docs
-* feat
-* fix
-* perf
-* refactor
-* revert
-* style
-* test
+- build
+- ci
+- chore
+- docs
+- feat
+- fix
+- perf
+- refactor
+- revert
+- style
+- test
 
 So a minimal commit message could look like...
 
@@ -201,8 +203,21 @@ Please refer to the [conventional commits website](https://www.conventionalcommi
 10. PR review process successfully completed?  
     Then the PR will be merged by any of the maintainers and it’s time for 🎉
 
-### linting of markdown content
+### Markdown Linting
 
 Any markdown content (in `/docs/**/*`) is linted via [`markdownlint`](https://github.com/DavidAnson/markdownlint) both for quality assurance and convenience.  
-For quality assurance, to have the markdown-files max standard compliant, so subsequent processing and exporting is possible without running into formatting issues.  
+For quality assurance, to have the markdown-files max standard compliant, so subsequent processing and exporting is possible without running into formatting issues. **We also check this using Github Actions**.  
 For convenience, because small markdown formatting mistakes are automatically fixed via the `markdownlint` upon commit - the `markdownlint` [`cli`](https://github.com/igorshubovych/markdownlint-cli) injects those fixes prior to the git commit, so don’t be surprised 😉
+
+You can run the Markdown tests yourself.  
+ Just run the test:  
+ `npm run markdown-lint`  
+Or just run the script that fixes all the errors that can be fixed:  
+`npm run markdown-lint-fix`
+
+### General Linting
+
+We also check via GitHub Actions for other different linting issues.  
+We use as Typescript File to run this tests.  
+You can run these test with:  
+`npm run general-lint`
