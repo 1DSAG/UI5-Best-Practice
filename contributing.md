@@ -1,25 +1,35 @@
 # Table of contents
 
-- [Table of contents](#table-of-contents)
-  - [Create Content](#create-content)
-    - [Create new Topic](#create-new-topic)
-      - [Create new folder](#create-new-folder)
-      - [Metadata in pages](#metadata-in-pages)
-    - [Add Images](#add-images)
-    - [Create sample app](#create-sample-app)
-    - [Add Emojis](#add-emojis)
-  - [Developing](#developing)
-    - [How to git commit messages](#how-to-git-commit-messages)
-  - [Contributing](#contributing)
-    - [How to use Pull Requests in GitHub](#how-to-use-pull-requests-in-github)
-    - [Markdown Linting](#markdown-linting)
-    - [General Linting](#general-linting)
+- [Create Content](#create-content)
+   - [Create new folder](#create-new-folder-for-a-new-topic)
+   - [Metadata in pages](#metadata-in-pages)
+   - [Add Images](#add-images)
+   - [Create sample app](#create-sample-app)
+   - [Add Emojis](#add-emojis)
+- [Developing](#developing)
+   - [How to git commit messages](#how-to-git-commit-messages)
+- [Contributing](#contributing)
+   - [How to use Pull Requests in GitHub](#how-to-use-pull-requests-in-github)
+   - [Markdown Linting](#markdown-linting)
+   - [General Linting](#general-linting)
+
+## General Advice
+
+* Please **read this guide carefully** so that nothing goes wrong at the beginning. Feel free to contact us if you have any questions or if anything is unclear, then we can improve this guide.
+
+* If you have new content but don't know how to integrate it, just write @[marianfoo](https://github.com/marianfoo) or @[vobu](https://github.com/vobu). We will find a way to share the content.
+
+* Don't be shy with new content. You will get at least one feedback by reviewing your PR. Here, content is built up little by little.
+
+* Commit often, whenever something is working, and is a step in the right direction do a commit or PR. This way other contributors can see the changes, and it will minimize the risk of merge conflicts.
+
+* Don't worry about encountering problems. We are a community and will help you in any case.
 
 ## Create Content
 
-### Create new Topic
+Here is the description of how to basically create content for this guide.
 
-#### Create new folder
+### Create new folder for a new topic
 
 Create a new folder under `docs`.
 Folder names should be lower case and seperated by hyphen (`-`, e.g. `my-new-folder`).
@@ -27,7 +37,7 @@ Create an `index.md`. This is the overview page that gives an overview of the to
 If you want to use images, create an extra image folder named `img`.
 All other pages that are subordinate to this topic should also be named lowerCamelCase.
 
-#### Metadata in pages
+### Metadata in pages
 
 There are various metadata with which various things are influenced.
 
@@ -160,49 +170,6 @@ Please refer to the [conventional commits website](https://www.conventionalcommi
 
 ## Contributing
 
-### How to use Pull Requests in GitHub
-
-0. fork the repo  
-   ![fork a github project](img/00-fork.png)
-
-1. clone your fork into your local development environment  
-   ![clone the forked project](img/05-clone-fork.png)
-
-2. create a new local git branch  
-   ![create new local git branch](img/10-new-branch.png)
-
-3. write, edit, code (most likely `markdown` content in `/docs/**/*`.  
-   👨‍💻  
-   repeat.
-
-   > note: we're using [`github flavoured markdown` (gfm)](https://github.github.com/gfm/) that allows for extended markdown formatting
-
-   `git commit` early, `git commit` often  
-   &rarr; watch out for the commit linting (see [git commit messages](#git-commit-messages))  
-   &rarr; enjoy the convenience of auto-markdown-linting (see [linting of markdown content](#linting-of-markdown-content))
-
-4. if applicable, [clean up your git commit history](https://about.gitlab.com/blog/2018/06/07/keeping-git-commit-history-clean/#situation-3-i-need-to-add-remove-or-combine-commits)
-
-5. push the local branch to your fork
-
-6. submit a pull request (PR)  
-   ![create a pull request on github](img/30-create-PR.png)
-
-7. write the PR message similar to the [git commit messages](#git-commit-messages), so `squash`-merging gets easy for the maintainers  
-   ![nice pull request message](img/31-PR-message.png)
-   if applicable, referenc open issues in your commit message (<https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword>)
-
-8. add a reviewer to the PR  
-   ![add a reviewer to the pull request](img/35-PR-reviewer.png)
-
-9. Changes necessary after the PR was created?  
-   Simply commit to the branch of your fork  
-   &rarr; the PR gets updated automatically  
-   &rarr; move the PR into `draft` mode until ready (then move to `ready for review`)
-
-10. PR review process successfully completed?  
-    Then the PR will be merged by any of the maintainers and it’s time for 🎉
-
 ### Markdown Linting
 
 Any markdown content (in `/docs/**/*`) is linted via [`markdownlint`](https://github.com/DavidAnson/markdownlint) both for quality assurance and convenience.  
@@ -221,3 +188,47 @@ We also check via GitHub Actions for other different linting issues.
 We use as Typescript File to run this tests.  
 You can run these test with:  
 `npm run general-lint`
+
+### How to use Pull Requests in GitHub
+
+0. fork the repo  
+   <img src="img/00-fork.png" alt="fork a github project" width="700"/>
+
+1. clone your fork into your local development environment  
+   <img src="img/05-clone-fork.png" alt="clone the forked project" width="700"/>
+
+2. create a new local git branch  
+   <img src="img/10-new-branch.png" alt="create new local git branch" width="700"/>
+
+3. write, edit, code (most likely `markdown` content in `/docs/**/*`.  
+   👨‍💻  
+   repeat.
+
+   > note: we're using [`kramdown`](https://kramdown.gettalong.org/)
+
+   `git commit` early, `git commit` often  
+   &rarr; watch out for the commit linting (see [git commit messages](#how-to-git-commit-messages)  
+   &rarr; enjoy the convenience of auto-markdown-linting (see [linting of markdown content](#markdown-linting))
+
+4. if applicable, [clean up your git commit history](https://about.gitlab.com/blog/2018/06/07/keeping-git-commit-history-clean/#situation-3-i-need-to-add-remove-or-combine-commits)
+
+5. push the local branch to your fork
+
+6. submit a pull request (PR)  
+   <img src="img/30-create-PR.png" alt="create a pull request on github" width="700"/>
+
+7. write the PR message similar to the [git commit messages](#how-to-git-commit-messages), so `squash`-merging gets easy for the maintainers  
+   <img src="img/31-PR-message.png" alt="nice pull request message" width="700"/>  
+   if applicable, referenc open issues in your commit message (<https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword>)
+
+8. add a reviewer to the PR  
+   <img src="img/35-PR-reviewer.png" alt="add a reviewer to the pull request" width="700"/>
+
+9. Changes necessary after the PR was created?  
+   Simply commit to the branch of your fork  
+   &rarr; the PR gets updated automatically  
+   &rarr; move the PR into `draft` mode until ready (then move to `ready for review`)
+
+10. PR review process successfully completed?  
+    Then the PR will be merged by any of the maintainers and it’s time for 🎉
+    
