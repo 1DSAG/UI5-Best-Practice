@@ -1,24 +1,37 @@
 # Table of contents
 
-* [Content](#content)
-  * [Create new Topic](#create-new-topic)
-  * [Create new Folder](#create-new-folder)
-  * [Metadata in pages](#metadata-in-pages)
-  * [Add Images](#add-images)
-  * [Create sample app](#create-sample-app)
-  * [Add Emojis](#add-emojis)
-* [Developing](#developing)
-  * [How to git commit messages](#how-to-git-commit-messages)
-* [Contributing](#contributing)
-  * [How to use Pull Requests in GitHub](#how-to-use-pull-requests-in-github)
-  * [linting of markdown content](#linting-of-markdown-content)
-* [Licensing](#licensing)
+- [Create Content](#create-content)
+   - [Create new folder](#create-new-folder-for-a-new-topic)
+   - [Metadata in pages](#metadata-in-pages)
+   - [Add Images](#add-images)
+   - [Create sample app](#create-sample-app)
+   - [Add Emojis](#add-emojis)
+- [Developing](#developing)
+   - [How to git commit messages](#how-to-git-commit-messages)
+- [Contributing](#contributing)
+   - [How to use Pull Requests in GitHub](#how-to-use-pull-requests-in-github)
+   - [Markdown Linting](#markdown-linting)
+   - [General Linting](#general-linting)
 
-## Content
+## General Advice
 
-### Create new Topic
+* Please **read this guide carefully** so that nothing goes wrong at the beginning. Feel free to contact us if you have any questions or if anything is unclear, then we can improve this guide.
 
-#### Create new folder
+* If you have new content but don't know how to integrate it, just write @[marianfoo](https://github.com/marianfoo) or @[vobu](https://github.com/vobu). We will find a way to share the content.
+
+* Don't be shy with new content. You will get at least one feedback by reviewing your PR. Here, content is built up little by little.
+
+* Commit often, whenever something is working, and is a step in the right direction do a commit or PR. This way other contributors can see the changes, and it will minimize the risk of merge conflicts.
+
+* Don't worry about encountering problems. We are a community and will help you in any case.
+
+* If you use content from SAP or from other sites, please state this clearly.
+
+## Create Content
+
+Here is the description of how to basically create content for this guide.  
+
+### Create new folder for a new topic
 
 Create a new folder under `docs`.
 Folder names should be lower case and seperated by hyphen (`-`, e.g. `my-new-folder`).
@@ -26,23 +39,23 @@ Create an `index.md`. This is the overview page that gives an overview of the to
 If you want to use images, create an extra image folder named `img`.
 All other pages that are subordinate to this topic should also be named lowerCamelCase.
 
-#### Metadata in pages
+### Metadata in pages
 
 There are various metadata with which various things are influenced.
 
-* `default`: this is the default layout, please use only this
-* `title`: this name will be visible in the sidebar
-* `permalink` (only index page): between two slashes, insert the name in ´lowerCamelCase´ here again
-* `has_children`
-  * If the index page has children, it must be `true`
-  * It´s also possible that child pages have child pages themselves
-* `nav_order`
-  * if page is an index page: Look at the other pages and add the corresponding number that fits here "alphabetically"
-  * if page is a child page: Defines the order within the topic
-* `sample_branch` (optional)
-  * If an example app exists in the [sample repository](https://github.com/1DSAG/UI5-Best-Practice-samples), the branch name can be inserted here
-  * can be used on all pages
-  * will create a button to the sample app in the other repository
+- `default`: this is the default layout, please use only this
+- `title`: this name will be visible in the sidebar
+- `permalink` (only index page): between two slashes, insert the name in ´lowerCamelCase´ here again
+- `has_children`
+  - If the index page has children, it must be `true`
+  - It´s also possible that child pages have child pages themselves
+- `nav_order`
+  - if page is an index page: Look at the other pages and add the corresponding number that fits here "alphabetically"
+  - if page is a child page: Defines the order within the topic
+- `sample_branch` (optional)
+  - If an example app exists in the [sample repository](https://github.com/1DSAG/UI5-Best-Practice-samples), the branch name can be inserted here
+  - can be used on all pages
+  - will create a button to the sample app in the other repository
 
 Example:
 
@@ -88,6 +101,7 @@ To integrate the sample app, the easiest way is to simply link to the branch.
 The boiler plate code makes it easy to use codesandbox.io, so a user can not only execute directly, but also edit the code.
 If you want to include the example via iframe, be sure to link directly to the branch.
 You can see this example for the sample branch `i18n`:
+
 ```js
 <iframe src="https://codesandbox.io/embed/github/1DSAG/UI5-Best-Practice-samples/tree/i18n/?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fview%2FMainView.view.xml&theme=dark&view=editor"
      style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
@@ -125,17 +139,17 @@ The structure of a "conventional commit" message looks like:
 
 `<type>` can be any of
 
-* build
-* ci
-* chore
-* docs
-* feat
-* fix
-* perf
-* refactor
-* revert
-* style
-* test
+- build
+- ci
+- chore
+- docs
+- feat
+- fix
+- perf
+- refactor
+- revert
+- style
+- test
 
 So a minimal commit message could look like...
 
@@ -158,40 +172,59 @@ Please refer to the [conventional commits website](https://www.conventionalcommi
 
 ## Contributing
 
+### Markdown Linting
+
+Any markdown content (in `/docs/**/*`) is linted via [`markdownlint`](https://github.com/DavidAnson/markdownlint) both for quality assurance and convenience.  
+For quality assurance, to have the markdown-files max standard compliant, so subsequent processing and exporting is possible without running into formatting issues. **We also check this using Github Actions**.  
+For convenience, because small markdown formatting mistakes are automatically fixed via the `markdownlint` upon commit - the `markdownlint` [`cli`](https://github.com/igorshubovych/markdownlint-cli) injects those fixes prior to the git commit, so don’t be surprised 😉
+
+You can run the Markdown tests yourself.  
+ Just run the test:  
+ `npm run markdown-lint`  
+Or just run the script that fixes all the errors that can be fixed:  
+`npm run markdown-lint-fix`
+
+### General Linting
+
+We also check via GitHub Actions for other different linting issues.  
+We use as Typescript File to run this tests.  
+You can run these test with:  
+`npm run general-lint`
+
 ### How to use Pull Requests in GitHub
 
 0. fork the repo  
-   ![fork a github project](img/00-fork.png)
+   <img src="img/00-fork.png" alt="fork a github project" width="700"/>
 
 1. clone your fork into your local development environment  
-   ![clone the forked project](img/05-clone-fork.png)
+   <img src="img/05-clone-fork.png" alt="clone the forked project" width="700"/>
 
 2. create a new local git branch  
-   ![create new local git branch](img/10-new-branch.png)
+   <img src="img/10-new-branch.png" alt="create new local git branch" width="700"/>
 
 3. write, edit, code (most likely `markdown` content in `/docs/**/*`.  
    👨‍💻  
    repeat.
 
-   > note: we're using [`github flavoured markdown` (gfm)](https://github.github.com/gfm/) that allows for extended markdown formatting
+   > note: we're using [`kramdown`](https://kramdown.gettalong.org/)
 
    `git commit` early, `git commit` often  
-   &rarr; watch out for the commit linting (see [git commit messages](#git-commit-messages))  
-   &rarr; enjoy the convenience of auto-markdown-linting (see [linting of markdown content](#linting-of-markdown-content))
+   &rarr; watch out for the commit linting (see [git commit messages](#how-to-git-commit-messages)  
+   &rarr; enjoy the convenience of auto-markdown-linting (see [linting of markdown content](#markdown-linting))
 
 4. if applicable, [clean up your git commit history](https://about.gitlab.com/blog/2018/06/07/keeping-git-commit-history-clean/#situation-3-i-need-to-add-remove-or-combine-commits)
 
 5. push the local branch to your fork
 
 6. submit a pull request (PR)  
-   ![create a pull request on github](img/30-create-PR.png)
+   <img src="img/30-create-PR.png" alt="create a pull request on github" width="700"/>
 
-7. write the PR message similar to the [git commit messages](#git-commit-messages), so `squash`-merging gets easy for the maintainers  
-   ![nice pull request message](img/31-PR-message.png)
+7. write the PR message similar to the [git commit messages](#how-to-git-commit-messages), so `squash`-merging gets easy for the maintainers  
+   <img src="img/31-PR-message.png" alt="nice pull request message" width="700"/>  
    if applicable, referenc open issues in your commit message (<https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword>)
 
 8. add a reviewer to the PR  
-   ![add a reviewer to the pull request](img/35-PR-reviewer.png)
+   <img src="img/35-PR-reviewer.png" alt="add a reviewer to the pull request" width="700"/>
 
 9. Changes necessary after the PR was created?  
    Simply commit to the branch of your fork  
@@ -200,9 +233,4 @@ Please refer to the [conventional commits website](https://www.conventionalcommi
 
 10. PR review process successfully completed?  
     Then the PR will be merged by any of the maintainers and it’s time for 🎉
-
-### linting of markdown content
-
-Any markdown content (in `/docs/**/*`) is linted via [`markdownlint`](https://github.com/DavidAnson/markdownlint) both for quality assurance and convenience.  
-For quality assurance, to have the markdown-files max standard compliant, so subsequent processing and exporting is possible without running into formatting issues.  
-For convenience, because small markdown formatting mistakes are automatically fixed via the `markdownlint` upon commit - the `markdownlint` [`cli`](https://github.com/igorshubovych/markdownlint-cli) injects those fixes prior to the git commit, so don’t be surprised 😉
+    

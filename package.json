@@ -6,6 +6,7 @@
   "scripts": {
     "create-pdf": "ts-node ./ts/to_pdf.ts",
     "markdown-lint": "markdownlint -c .markdownlint.jsonc  ./docs",
+    "markdown-lint-fix": "markdownlint -c .markdownlint.jsonc --fix  ./docs",
     "general-lint" : "ts-node ./ts/lint.ts"
   },
   "repository": {
