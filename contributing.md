@@ -25,9 +25,11 @@
 
 * Don't worry about encountering problems. We are a community and will help you in any case.
 
+* If you use content from SAP or from other sites, please state this clearly.
+
 ## Create Content
 
-Here is the description of how to basically create content for this guide.
+Here is the description of how to basically create content for this guide.  
 
 ### Create new folder for a new topic
 
