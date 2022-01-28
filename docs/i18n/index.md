@@ -11,7 +11,8 @@ sample_branch: i18n
 
 Many companies use SAP systems and applications and many different countries.
 To ensure easy translation, the "i18n" (Internationalization) process is used.
-The app is not always recreated, but only the texts are translated and replaced.
+The app is not always recreated, but only the texts are translated and replaced.  
+Lorem ipsum ..
 
 ## Language Tags
 
