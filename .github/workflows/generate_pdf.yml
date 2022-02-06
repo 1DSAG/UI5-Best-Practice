@@ -1,8 +1,5 @@
 name: "Create PDF"
-on:
-    push:
-      branches:
-        - main
+on: workflow_dispatch
 
 jobs:
   create-pdf:
