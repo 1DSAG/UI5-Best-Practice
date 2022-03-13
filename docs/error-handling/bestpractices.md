@@ -44,7 +44,7 @@ this.getModel().read("/Entity('key')", {
 });
 ```
 
-A sample for a separate error handler file can be found in the section [Sample Error Handler](sampleerrorhandler.markdown).
+A sample for a separate error handler file can be found in the section [Sample Error Handler](sampleerrorhandler.md).
 
 ## Consider the SAP Fiori Guidelines
 
@@ -88,4 +88,4 @@ _showServiceError: function(sDetails) {
 
 This form of error output ensures that only one error is displayed and all other errors are ignored. Instead, in the case of multiple errors, you should use a [message view](https://experience.sap.com/fiori-design-web/message-view/) instead of the message box.
 
-An example for a smarter implementation can be found in the [Sample Error Handler](sampleerrorhandler.markdown).
+An example for a smarter implementation can be found in the [Sample Error Handler](sampleerrorhandler.md).
