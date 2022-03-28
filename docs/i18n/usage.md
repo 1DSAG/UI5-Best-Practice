@@ -4,6 +4,7 @@ title: Usage
 name: Usage
 parent: i18n
 nav_order: 1
+sample_branch: i18n
 ---
 
 # Usage of i18n in UI5 Apps

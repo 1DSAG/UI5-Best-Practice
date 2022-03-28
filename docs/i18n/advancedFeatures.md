@@ -4,6 +4,7 @@ title: Advanced Features
 name: Advanced Features
 parent: i18n
 nav_order: 2
+sample_branch: i18n
 ---
 
 # Advanced Features in i18n
@@ -13,6 +14,7 @@ nav_order: 2
     - [Usage in 1.69 and above](#usage-in-169-and-above)
     - [Usage in 1.68 and below](#usage-in-168-and-below)
     - [Result](#result)
+  - [supportedLocales and fallbackLocale](#supportedlocales-and-fallbacklocale)
   - [`ui5 tooling` tasks](#ui5-tooling-tasks)
 
 ## Placeholder in XML Views
@@ -89,14 +91,44 @@ Ressoures:
 - [Stackoverflow Comment](https://stackoverflow.com/a/55587775/4743935)
 - [Openui5 Issue with Change to use declaration in XML View](https://github.com/SAP/openui5/issues/2475)
 
-### CodeSandbox Sample
+## supportedLocales and fallbackLocale
 
-<iframe src="https://codesandbox.io/embed/github/1DSAG/UI5-Best-Practice-samples/tree/i18n/?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fview%2FMainView.view.xml&theme=dark&view=editor"
-     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
-     title="ui5-sandbox"
-     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-   ></iframe>
+To avoid unwanted requests for unavailable translation files, since **UI5 version 1.77**, you can provide `supportedLocales` and `fallbackLocale` in your app´s `manifest`.
+
+For more information you can look at the official documentation or this awesome blog post:
+[UI5 Documentation: Supported Locales and Fallback](https://ui5.sap.com/#/topic/ec753bc539d748f689e3ac814e129563)
+
+[UI5ers Buzz #54: I18n with supportedLocales and fallbackLocale configuration](https://blogs.sap.com/2020/06/03/ui5ers-buzz-54-i18n-with-supportedlocales-and-fallbacklocale-configuration/)
+
+Example from the blog post:
+
+```javascript
+{
+ "_version": "1.21.0",
+ "sap.app": {
+  "id": "sap.ui.demo.todo",
+  "type": "application",
+        "i18n": {
+            "bundleUrl": "i18n/i18n.properties",
+            "supportedLocales": ["en", "de"],
+            "fallbackLocale": "en"
+        },
+        "title": "{{appTitle}}"
+ },
+ "sap.ui5": {
+  "models": {
+   "i18n": {
+    "type": "sap.ui.model.resource.ResourceModel",
+    "settings": {
+     "bundleUrl": "i18n/i18n.properties",
+     "supportedLocales": ["en", "de"],
+     "fallbackLocale": "en"
+    }
+   }
+  }
+ }
+}
+```
 
 ## `ui5 tooling` tasks
 
