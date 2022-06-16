@@ -8,9 +8,9 @@ nav_order: 3
 
 ## Routing Patterns
 
-Whenever a hash is added to a URL, the router checks whether there is a route with a matching pattern. The first matching route is taken and the corresponding target view is called. The data provided with the hash are passed on to the target.
+Whenever a hash is added to a URL, the router checks whether there is a route with a matching pattern. The first matching route is taken and the corresponding target view is called. The data provided with the hash are passed on to the target [(1)](#reference1).
 
-You can use the following kinds of patterns:
+You can use the following kinds of patterns [(2) Blog Post: Routing with Parameters in SAPUI5 application](#reference2):
 
 ### Hard-coded pattern
 
@@ -86,6 +86,8 @@ sap.ui.define([
    You can define mandatory parameters for the pattern by placing the parameter in curly brackets (`{parameter ID}`).
 
    For example, if you define the pattern `product/{id}`, the hashes `product/5` and `product/3` (where 3 and 5 are product IDs) match the pattern. The matched event handler gets 5 or 3 passed on with the key id in its arguments. But hash `product/` does not match the pattern because the mandatory parameter is missing.
+
+   
 
 #### Manifest
 
@@ -378,3 +380,8 @@ Routing parametes should be named in singular form
 * `itemDetails/{objectIds}`
 
 </div>
+
+#### References
+
+<a href="https://help.sap.com/doc/saphelp_nw75/7.5.5/en-US/3d/18f20bd2294228acb6910d8e8a5fb5/content.htm?no_cache=true" name="reference1">(1) SAP Help: Routing and Navigation</a>  
+<a href="https://blogs.sap.com/2021/04/14/routing-with-parameters-in-sapui5-application/" name="reference2">(2) SAP Blog Post: Routing with Parameters in SAPUI5 application</a>  

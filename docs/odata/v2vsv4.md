@@ -73,7 +73,7 @@ The UI5 OData V4 model does not support the methods `getData`, `getObject`, `get
 
 ### Batch methods
 
-The UI5 OData V4 model does not support the methods `getChangeBatchGroups`, `getChangeGroups`, `getDeferredGroups`, `setChangeBatchGroups`, `setChangeGroups`, `setDeferredBatchGroups`, `setDeferredGroups`, `setUseBatch` (and corresponding model construction parameters). Batch groups are solely defined via binding parameters with the corresponding parameters on the model as default. Application groups are by default deferred; there is no need to set or get deferred groups. You just need the `submitBatch` method on the model to control execution of the batch. You can use the predefined batch group `$direct` to switch off batch either for the complete model or for a specific binding (only possible for the complete model in V2).
+The UI5 OData V4 model does not support the methods `getChangeBatchGroups`, `getChangeGroups`, `getDeferredGroups`, `setChangeBatchGroups`, `setChangeGroups`, `setDeferredBatchGroups`, `setDeferredGroups`, `setUseBatch` (and corresponding model construction parameters). Batch groups are solely defined via binding parameters with the corresponding parameters on the model as default. Application groups are by default deferred; there is no need to set or get deferred groups. You just need the `submitBatch` method on the model to control execution of the batch. You can use the predefined batch group `$direct` to switch off batch either for the complete model or for a specific binding (only possible for the complete model in V2) [(1)](#reference1).
 
 ### OData operations executed via binding
 
@@ -115,6 +115,11 @@ The UI5 OData V4 model does not support methods `getServiceAnnotations`, `getSer
 
 ## NOTE
 
-Due to the limited feature scope of this version of the SAPUI5 OData V4 model, check that all required features are in place before developing applications. Double check the detailed [documentation](https://help.sap.com/viewer/468a97775123488ab3345a0c48cadd8f/1809.000/en-US/e1b625940c104b558e52f47afe5ddb4f.html) of the features, as certain parts of a feature may be missing although you might expect these parts as given. Some controls might not work due to small incompatibilities compared to `sap.ui.model.odata.(v2.)ODataModel`, or due to missing features in the model (like tree binding).
+Due to the limited feature scope of this version of the SAPUI5 OData V4 model, check that all required features are in place before developing applications. Double check the detailed [documentation](https://help.sap.com/viewer/468a97775123488ab3345a0c48cadd8f/1809.000/en-US/e1b625940c104b558e52f47afe5ddb4f.html) of the features, as certain parts of a feature may be missing although you might expect these parts as given. Some controls might not work due to small incompatibilities compared to `sap.ui.model.odata.(v2.)ODataModel`, or due to missing features in the model (like tree binding)  [(2)](#reference2).
 
 ---
+
+### References
+
+<a href="https://sapui5.hana.ondemand.com/sdk/#/topic/abd4d7c7548d4c29ab8364d3904a6d74.html" name="reference1">(1) UI5 Doc: Changes Compared to OData V2 Model</a>  
+<a href="https://help.sap.com/docs/SAP_NETWEAVER_AS_ABAP_751_IP/468a97775123488ab3345a0c48cadd8f/5de13cf4dd1f4a3480f7e2eaaee3f5b8.html?version=7.51.9&locale=en-US" name="reference2">(2) SAP Help: OData V4 Model</a>  

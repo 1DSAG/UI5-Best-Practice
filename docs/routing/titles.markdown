@@ -8,7 +8,7 @@ nav_order: 5
 
 ## Titles in Targets
 
-Routing in SAPUI5 allows you to define titles declaratively in the configuration. The title can be set with valid binding syntax which is then resolved under the scope of the target to which it belongs. This means that the title can be translated when it’s bound to the i18n model or resolved dynamically under the current binding context.
+Routing in SAPUI5 allows you to define titles declaratively in the configuration. The title can be set with valid binding syntax which is then resolved under the scope of the target to which it belongs. This means that the title can be translated when it’s bound to the i18n model or resolved dynamically under the current binding context [(1)](#reference1).
 
 ### Using a translated Target Title
 
@@ -55,3 +55,7 @@ Routing in SAPUI5 allows you to define titles declaratively in the configuration
     ...
 }
 ```
+
+#### References
+
+<a href="https://ui5.sap.com/#/topic/1238d706b130433c9bd6b85cfb77cece" name="reference1">(1) UI5 Doc: Using the title Property in Targets</a>  

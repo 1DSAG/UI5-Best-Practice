@@ -17,7 +17,7 @@ This section contains useful dos and don'ts for developers programming SAPUI5 ap
 If you find yourself inventing function imports such as CreateX, ReadX, GetX, ChangeX, UpdateX, or DeleteX, you should make the entity type X part of your model.
 `CRUD` is covered by `GET`, `PUT`, and `DELETE` to entities and `POST` to entity sets. .
 
-Function imports may be used for operations other than `CRUD`, such as Approve, Reject, Reserve, and Cancel. However, you might find that a reservation entity that you can create, update, and delete is better suited.
+Function imports may be used for operations other than `CRUD`, such as Approve, Reject, Reserve, and Cancel. However, you might find that a reservation entity that you can create, update, and delete is better suited [(1)](#reference1).
 
 #### * Do return completely filled entries in response to GET ~/EntitySet
 
@@ -64,7 +64,7 @@ This takes care of leading zeros and alpha conversions
 
 Binary data in common formats (for example `PDF`, `GIF`, `JPEG`) is naturally represented in OData as a media resource with a corresponding media link entry, that is, a structured record describing the media resource, and containing a link to it. In this way, the binary can be accessed directly via its own URL, just like a browser accesses a picture in the Internet. In fact, a browser can then access your binary data directly, without needing to know OData.
 
-Another benefit is performance. Binary data as a media resource is streamed directly byte by byte, whereas binary data hidden within an OData Property of type `Edm.Binary` is represented as a string of hex digits, thereby doubling its size.
+Another benefit is performance. Binary data as a media resource is streamed directly byte by byte, whereas binary data hidden within an OData Property of type `Edm.Binary` is represented as a string of hex digits, thereby doubling its size [(1)](#reference1).
 
 #### * Do provide navigation properties to link related data
 
@@ -77,9 +77,6 @@ It is possible to create a referential constraints for an association. A referen
 #### * Do follow links provided by the server
 
 URI construction rules can change, but the basic convention surrounding links will not. Following links is therefore future-proof.
-
-Note
-Strive to develop high-quality OData services. For more information, see Creating High-Quality OData Services.
 
 ### Don'ts
 
@@ -114,3 +111,8 @@ For more information, see: [Do use media resources and media link entries](#do-m
 It is inappropriate to express entity-relationship models with just two entities, one named Entity and one named Relationship.
 
 #### * Don't just tunnel homegrown XML
+
+
+#### References
+
+<a href="https://help.sap.com/docs/SAP_NETWEAVER_AS_ABAP_751_IP/68bf513362174d54b58cddec28794093/c6fd2651c294256ee10000000a445394.html?version=7.51.8&locale=en-US" name="reference1">(1) SAP Help: OData Best Practices</a>  
