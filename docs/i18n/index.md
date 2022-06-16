@@ -3,10 +3,11 @@ layout: default
 title: i18n
 permalink: /i18n/
 has_children: true
-nav_order: 1
+nav_order: 40
+sample_branch: i18n
 ---
 
-## Overview i18n Overview
+# Overview i18n Overview
 
 Many companies use SAP systems and applications and many different countries.
 To ensure easy translation, the "i18n" (Internationalization) process is used.
@@ -66,6 +67,25 @@ The "keys" are always identical and will be retrieved later by App based on them
 
 It is also possible to connect the i18n keys with a point to get a better overview. You can still use here camelCase.
 
-| ![i18n example with dot notation](img/i18_en_alternative.png) |
+| ![i18n example with dot notation](img/i18_en_alternative.png)|
 | :--: |
 | *i18n example with dot notation* |
+
+## Annotations in i18n
+
+Annotations in the i18n files are helpful to understand how the i18n texts are used in the app. Annotations are inserted as comments and include a text type classification, an optional length restriction and a freetext explanation.
+
+| ![i18n example with annotations](img/i18n_en_annotaions.png) |
+| :--: |
+| *i18n example with annotations* |
+
+A list of the possible text classification can be found here: [Annotations in Translation Files](https://openui5.hana.ondemand.com/topic/831039835e7c4da3a8a0b49567573afe)
+
+## CodeSandbox Sample
+
+<iframe src="https://codesandbox.io/embed/github/1DSAG/UI5-Best-Practice-samples/tree/i18n/?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fview%2FMainView.view.xml&theme=dark&view=editor"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="ui5-sandbox"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>

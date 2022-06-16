@@ -1,0 +1,19 @@
+name: "Create PDF"
+on: workflow_dispatch
+
+jobs:
+  create-pdf:
+    runs-on: ubuntu-latest
+    permissions:
+            contents: write
+    steps:
+    - uses: actions/checkout@v2
+
+    - uses: actions/setup-node@v2
+      with:
+          node-version: 16
+    - run: npm install
+    - run: npm run create-pdf
+    - uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+            commit_message: Update PDF

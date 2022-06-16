@@ -34,6 +34,8 @@ remote_theme: pmarsceill/just-the-docs # for github pages
 # theme: "just-the-docs" # for local install
 plugins:
   - jekyll-feed
+  - jemoji
+  - jekyll-remote-theme
 
 # Exclude from processing.
 # The following items will not be processed, by default.

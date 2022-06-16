@@ -1,0 +1,8 @@
+{
+    "MD013": false,
+    "MD033": false,
+    // because we're not displaying the front matter "title"
+    "MD025": false,
+    "MD029": false
+    
+}

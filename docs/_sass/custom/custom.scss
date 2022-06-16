@@ -19,3 +19,53 @@
 .remove-before *::before {
     content: none !important
 }
+
+.sampleAppButton {
+	background:linear-gradient(to bottom, #7253ed 5%, #7253ed 100%);
+	background-color:#7253ed;
+	border-radius:6px;
+	border:1px solid #7253ed;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	font-weight:bold;
+	padding:5px 29px;
+	text-decoration:none;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.sampleAppButtonContainer {
+	z-index: 100;
+	position: fixed;
+	top: auto;
+	bottom: 1rem;
+	right: auto;
+}
+
+
+@media screen and (min-width : 1024px)
+{
+	.sampleAppButtonContainer {
+
+		z-index: 100;
+		position: fixed;
+		top: 5rem;
+		right: 5rem;
+	}
+}
+@media screen and (max-width : 425px)
+{
+	.sampleAppButton {
+		font-size: 4vw;
+	}
+}
+.sampleAppButton:hover {
+	background:linear-gradient(to bottom, #7253ed 5%, #7253ed 100%);
+	background-color:#7253ed;
+}
+.sampleAppButton:active {
+	position:relative;
+	top:1px;
+}
