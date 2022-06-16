@@ -13,6 +13,7 @@ Because **the DSAG UI5 best practice guide is a living document** 👨‍💻 - 
 The document is written in (kramdown flavored) `markdown` and served via `jekyll` in `github pages` (<https://1dsag.github.io/UI5-Best-Practice/>).
 
 ## Table of contents
+
 * [Getting started Options](#getting-started-options)
   * [Quick Start with GitHub web-based editor](#quick-start-with-github-web-based-editor)
   * [Development Docker Container](#development-docker-container)
@@ -24,11 +25,9 @@ The document is written in (kramdown flavored) `markdown` and served via `jekyll
 
 ### **Quick Start with GitHub web-based editor**
 
-
 :point_right: No local installation  
 :point_right: Everything in Browser  
 :point_right: Preview after every commit  
-
 
 ----
 
@@ -45,7 +44,7 @@ You can't see the final result right away, but GitHub can generate that as well 
 
 ![fork a github project](img/100-01-forked-page.png)
 
-3.  Press just `.` on your keyboard to switch to the IDE
+3. Press just `.` on your keyboard to switch to the IDE
 
 4. Create new Branch
 
@@ -63,7 +62,7 @@ Under `/docs` is the documentation. Just start editing or create a new folder fo
 
 You can preview the site also within GitHub.  
 Just go to Settings in your repository and there to Pages.  
-The link would be https://github.com/YOURUSERNAME/UI5-Best-Practice/settings/pages  
+The link would be <https://github.com/YOURUSERNAME/UI5-Best-Practice/settings/pages>  
 Choose here your branch you´re working on and choose the `docs` folder.  
 After you have saved, it takes a few minutes until the page is accessible under the given URL.
 From then on, the page is rebuilt with every commit.
@@ -72,18 +71,16 @@ From then on, the page is rebuilt with every commit.
 
 ### **Development Docker Container**
 
-
 :point_right: Only Visual Studio Code and Docker needed  
 :point_right: Instant Preview of your Changes  
 :point_right: Run linting before commiting  
-
 
 ----
 
 This is the easiest way to have your development environment ready in no time.
 You get a ready to use configured Debian Container which is transparently used by Visual Studio Code.
 
-#### Installation Steps
+#### Installation Steps Docker Container
 
 Install the following programs:
 
@@ -111,10 +108,8 @@ bundle exec jekyll serve --livereload
 
 ### **Local installation**
 
-
 :point_right: Same as Docker Container  
 :point_right: Complete Control over Enviroment  
-
 
 ----
 
@@ -126,7 +121,7 @@ bundle exec jekyll serve --livereload
 * Update Build Toolchain `ridk install 3`
 * see setup local github pages site 😉
 
-#### Installation Steps
+#### Installation Steps Local installation
 
 * make sure, `ruby` 2.7 is installed on your system
 * clone the repo

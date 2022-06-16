@@ -1,31 +1,31 @@
 # Table of contents
 
 - [Create Content](#create-content)
-   - [Create new folder](#create-new-folder-for-a-new-topic)
-   - [Metadata in pages](#metadata-in-pages)
-   - [Add Images](#add-images)
-   - [Create sample app](#create-sample-app)
-   - [Add Emojis](#add-emojis)
+  - [Create new folder](#create-new-folder-for-a-new-topic)
+  - [Metadata in pages](#metadata-in-pages)
+  - [Add Images](#add-images)
+  - [Create sample app](#create-sample-app)
+  - [Add Emojis](#add-emojis)
 - [Developing](#developing)
-   - [How to git commit messages](#how-to-git-commit-messages)
+  - [How to git commit messages](#how-to-git-commit-messages)
 - [Contributing](#contributing)
-   - [How to use Pull Requests in GitHub](#how-to-use-pull-requests-in-github)
-   - [Markdown Linting](#markdown-linting)
-   - [General Linting](#general-linting)
+  - [How to use Pull Requests in GitHub](#how-to-use-pull-requests-in-github)
+  - [Markdown Linting](#markdown-linting)
+  - [General Linting](#general-linting)
 
 ## General Advice
 
-* Please **read this guide carefully** so that nothing goes wrong at the beginning. Feel free to contact us if you have any questions or if anything is unclear, then we can improve this guide.
+- Please **read this guide carefully** so that nothing goes wrong at the beginning. Feel free to contact us if you have any questions or if anything is unclear, then we can improve this guide.
 
-* If you have new content but don't know how to integrate it, just write @[marianfoo](https://github.com/marianfoo) or @[vobu](https://github.com/vobu). We will find a way to share the content.
+- If you have new content but don't know how to integrate it, just write @[marianfoo](https://github.com/marianfoo) or @[vobu](https://github.com/vobu). We will find a way to share the content.
 
-* Don't be shy with new content. You will get at least one feedback by reviewing your PR. Here, content is built up little by little.
+- Don't be shy with new content. You will get at least one feedback by reviewing your PR. Here, content is built up little by little.
 
-* Commit often, whenever something is working, and is a step in the right direction do a commit or PR. This way other contributors can see the changes, and it will minimize the risk of merge conflicts.
+- Commit often, whenever something is working, and is a step in the right direction do a commit or PR. This way other contributors can see the changes, and it will minimize the risk of merge conflicts.
 
-* Don't worry about encountering problems. We are a community and will help you in any case.
+- Don't worry about encountering problems. We are a community and will help you in any case.
 
-* If you use content from SAP or from other sites, please state this clearly.
+- If you use content from SAP or from other sites, please state this clearly.
 
 ## Create Content
 
@@ -233,4 +233,3 @@ You can run these test with:
 
 10. PR review process successfully completed?  
     Then the PR will be merged by any of the maintainers and it’s time for 🎉
-    
