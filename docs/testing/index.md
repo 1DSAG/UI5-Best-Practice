@@ -10,8 +10,22 @@ sample_branch: testing
 Testing
 =================
 
-Automated testing is an essential part of the development workflow to ensure the technical correctness of
-the requirement. It is a recommended practise to guide the implementation through "Test-Driven Development" (TDD).
+{: .no_toc }
+
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
+There are three main testing frameworks/tools available for UI5: `QUnit`, `OPA5` and `wdi5`.  
+`QUnit` covers unit tests, `OPA5` component- and integration test, and `wdi5` also integration- and end-to-end test scopes.
+
+[Automated testing](#automation) is an essential part of the development workflow to ensure the technical correctness of
+the requirement. Additionally, it is a recommended practise to guide the implementation through "Test-Driven Development" (TDD).
 To test against your acceptance criteria you should combine "TDD" with "Behaviour-Driven Development" (BDD).
 
 How does "TDD" work?
