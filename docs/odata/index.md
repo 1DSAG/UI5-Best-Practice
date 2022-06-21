@@ -22,7 +22,7 @@ The service document is available at the "doc root"/service-root: <http://host/s
 
 #### The Metadata Document
 
-The metadata document describes the types, sets, functions and actions understood by the OData service. Clients can use the metadata document to understand how to query and interact with entities in the service.
+The metadata document describes the types, sets, functions and actions understood by the OData service. Clients can use the metadata document to understand how to query and interact with entities in the service [(1)](#reference1).
 
 The metadata document is available at <http://host/service/$metadata>.
 
@@ -35,3 +35,7 @@ OData uses the HTTP verbs to indicate the operations on the resources.
 * `PUT`: Update an existing resource by replacing it with a complete instance.
 * `PATCH`: Update an existing resource by replacing part of its properties with a partial instance.
 * `DELETE`: Remove the resource.
+
+#### References
+
+<a href="https://learning.sap.com/learning-journey/developing-with-sap-extension-suite/describing-odata" name="reference1">(1) SAP Learning: Describing OData</a>  

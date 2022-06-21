@@ -4,9 +4,10 @@ title: i18n
 permalink: /i18n/
 has_children: true
 nav_order: 40
+sample_branch: i18n
 ---
 
-## Overview i18n Overview
+# Overview i18n Overview
 
 Many companies use SAP systems and applications and many different countries.
 To ensure easy translation, the "i18n" (Internationalization) process is used.
@@ -80,3 +81,11 @@ Annotations in the i18n files are helpful to understand how the i18n texts are u
 
 A list of the possible text classification can be found here: [Annotations in Translation Files](https://openui5.hana.ondemand.com/topic/831039835e7c4da3a8a0b49567573afe)
 
+## CodeSandbox Sample
+
+<iframe src="https://codesandbox.io/embed/github/1DSAG/UI5-Best-Practice-samples/tree/i18n/?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fview%2FMainView.view.xml&theme=dark&view=editor"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="ui5-sandbox"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>

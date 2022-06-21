@@ -6,7 +6,7 @@
     "dockerfile": "Dockerfile",
     // Update 'VARIANT' to pick a Node version: 12, 14, 16
     "args": {
-      "VARIANT": "16"
+      "VARIANT": "16-bullseye"
     }
   },
   // Set *default* container specific settings.json values on container create.
@@ -24,7 +24,7 @@
     35729
   ],
   // Use 'postCreateCommand' to run commands after the container is created.
-  "postCreateCommand": "npm install && sudo gem install bundler && cd docs && bundle install",
+  "postCreateCommand": "npm i -g npm@latest && hash -r && npm install && sudo gem install bundler && cd docs && bundle install",
   // Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
   "remoteUser": "node"
 }
