@@ -14,7 +14,9 @@ That's OK as it is no excuse to _drop_ writing tests - instead, continue writing
 
 In end-to-end tests, focus on the most important "journeys" that always need to work for the user. Think of these journeys as the core of the value chain of your app. Without your users being able to travel these journeys, the app looses value - so utilize end-to-end tests to safeguard those "happy paths".
 
-All the difference resides in the wording, any `OPA5`-, `UIveri5`-, or `$framework`-specific syntax needs no change:
+All the difference resides in the wording, any `OPA5`-, `wdi5`-, or `$framework`-specific syntax needs no change to walk the happy path.  
+Instead, focus on writing the happy path first in the test framework of your choice.  
+Here's an `OPA5`-example:
 
 ```js
 sap.ui.require([
@@ -26,7 +28,7 @@ sap.ui.require([
         // Arrangements
         Given.iStartTheBeerShopApp()
 
-        //Actions
+        // Actions
         When.onTheOverViewPage
             .iNavigateToTheIPAPage()
             .and.iSelectAPaleAle("YippiAPIPA")
@@ -47,6 +49,6 @@ If there's a ticket number (or any other identifier) for the bug, put the number
 ```js
 QUnit.test("(fix) bug-4711-beershop-app: glass overflow", assert => {
     // ...
-    assert.strictLowerThanOrEqul(glass, beer)
+    assert.strictLowerThanOrEqual(glass, beer)
 })
 ```
