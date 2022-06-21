@@ -73,25 +73,28 @@ Parent directories and files were omitted to focus on the test directory structu
 
 ```text
 <project-dir>/uimodule/webapp/test
+├── e2e
+|  ├── basic.test.js
+|  └── happy-path.test.js
 ├── integration
-│   ├── AllJourneys.js
-│   ├── MainJourney.js
-│   ├── /arrangements
-│   │   └── Startup.js
-│   ├── opaTests.qunit.html
-│   ├── opaTests.qunit.js
-│   └── /pages
-│       └── Main.js
+|  ├── AllJourneys.js
+|  ├── MainJourney.js
+|  ├── arrangements
+|  |  └── Startup.js
+|  ├── opaTests.qunit.html
+|  ├── opaTests.qunit.js
+|  └── pages
+|     └── Main.js
 ├── testsuite.qunit.html
 ├── testsuite.qunit.js
-└── /unit
-    ├── AllTests.js
-    ├── /controller
-    │   └── MainView.controller.js
-    ├── /helper
-    ├── /model
-    ├── unitTests.qunit.html
-    └── unitTests.qunit.js
+└── unit
+   ├── AllTests.js
+   ├── controller
+   |  └── MainView.controller.js
+   ├── helper
+   |  └── FakeI18nModel.js
+   ├── unitTests.qunit.html
+   └── unitTests.qunit.js
 ```
 
 Examples
